@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import rawTasks from "@/data/tasks.json";
+import rawTasks from "@data/tasks.json";
 import { TaskItem, UserProfile } from "@/types";
 import { useProfileStore } from "@/store/useProfileStore";
 

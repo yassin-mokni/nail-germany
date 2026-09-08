@@ -196,5 +196,151 @@
       "Verify company has > 10 regular employees (threshold for KSchG applicability)",
       "If terminated unlawfully after 6 months, you must file a lawsuit (Kündigungsschutzklage) within exactly 3 weeks"
     ]
+  },
+  {
+    "id": "health-insurance-transition",
+    "title": "Statutory Health Insurance Transition & Expat Insurance Trap",
+    "description": "Transition from temporary travel or expat policies (Mawista, Care Concept) into statutory (GKV) or full German private (PKV) health insurance.",
+    "urgency": "critical",
+    "category": "Legal & Insurance",
+    "conditions": {},
+    "legal_ref": "§ 5 Abs. 1 Nr. 1 SGB V & § 193 Abs. 3 VVG",
+    "deadline": "Within first 3 months of arrival or employment start",
+    "trap_warning": "Cheap inbound 'expat insurance' (e.g., Mawista, Care Concept) does not satisfy comprehensive statutory coverage under § 193 Abs. 3 VVG. Ausländerbehörde officers frequently reject these for Blue Cards and permanent residence. Worse, if you remain on expat insurance as a freelancer and later try to join public health insurance (TK, AOK), public funds are legally barred from taking you, leaving you trapped in costly private plans with back-payment penalties (Säumniszuschläge).",
+    "action_steps": [
+      "If employed: Choose a statutory fund (Techniker Krankenkasse, AOK, Barmer) and give your membership certificate (Mitgliedsbescheinigung) to HR before your first paycheck",
+      "If freelance: Apply for voluntary public insurance (Freiwillige gesetzliche Krankenversicherung) strictly within 3 months of arriving if you had prior EU public insurance",
+      "Ensure the policy includes mandatory long-term nursing care insurance (Pflegepflichtversicherung)",
+      "Never cancel existing coverage until you have written acceptance from the new German insurer"
+    ]
+  },
+  {
+    "id": "kita-gutschein-application",
+    "title": "Kita-Gutschein Application (Daycare Legal Entitlement)",
+    "description": "Secure your municipal childcare voucher (Kita-Gutschein) and assert your statutory entitlement to a daycare spot for children aged 1 and above.",
+    "urgency": "recommended",
+    "category": "Family & Social",
+    "conditions": {
+      "has_children": true
+    },
+    "legal_ref": "§ 24 Abs. 2 SGB VIII (Rechtsanspruch auf frühkindliche Förderung)",
+    "deadline": "6 to 9 months before required daycare start date",
+    "trap_warning": "German law guarantees every child from age 1 a legal right to a daycare spot (§ 24 SGB VIII), but physical spots are extremely scarce. Applying late means you will be waitlisted for over a year, forcing one parent out of work. If the Jugendamt fails to assign a spot, you have the legal right to sue the city or hire a private nanny (Tagesmutter) and force the city to reimburse costs under state administrative law.",
+    "action_steps": [
+      "Apply for the official Kita-Gutschein via your city's youth portal (Jugendamt / Kita-Navigator) at least 6 months before needed",
+      "Collect proof of parental working hours from employers to qualify for full-day care (Ganztagsbetreuung / 8-9 hours)",
+      "Contact 15–20 local Kitas directly with your Gutschein application confirmation number",
+      "If no spot is allocated 2-3 months before work resumption, file an emergency administrative notice (Klage auf Kita-Platz Zuweisung) with the Jugendamt"
+    ]
+  },
+  {
+    "id": "steuer-id-retrieval-class-vi",
+    "title": "Steuer-ID Retrieval & Tax Class VI Penalty Prevention",
+    "description": "Obtain your 11-digit Tax ID (Steuer-ID) from the Finanzamt immediately to prevent employer HR from withholding 45-50% under emergency Tax Class VI.",
+    "urgency": "critical",
+    "category": "Taxes & Employment",
+    "conditions": {
+      "employment": "employed"
+    },
+    "legal_ref": "§ 139b Abgabenordnung (AO) & § 39c Abs. 1 EStG",
+    "deadline": "Before the first monthly payroll accounting cutoff (usually 15th-20th of month 1)",
+    "trap_warning": "The Federal Central Tax Office (BZSt) automatically generates your Steuer-ID after Anmeldung, but postal letters take 2 to 6 weeks. If your company runs monthly payroll without your Steuer-ID in the ELStAM system, German tax law (§ 39c EStG) legally mandates them to place you into Tax Class VI (Steuerklasse VI). This withholds maximum emergency taxes—taking almost half your first salary. While you can claim it back on next year's tax return, you lose thousands in cash flow for months.",
+    "action_steps": [
+      "Complete your Anmeldung as early as possible",
+      "If the BZSt letter does not arrive within 5 business days, walk in person into your municipal Finanzamt with your Meldebestätigung and passport",
+      "Request your Steuer-ID printout over the counter (Finanzamt officers can look it up immediately on their terminal)",
+      "Immediately email the 11-digit Steuer-ID and your birth date to your company payroll department"
+    ]
+  },
+  {
+    "id": "schufa-free-art15-datenkopie",
+    "title": "Schufa Credit Record & Free GDPR Data Copy (Art. 15 DSGVO)",
+    "description": "Initialize and monitor your German credit score, dispute inaccurate records, and obtain your statutory free credit disclosure without paying commercial fees.",
+    "urgency": "recommended",
+    "category": "Finance & Study",
+    "conditions": {},
+    "legal_ref": "Art. 15 DSGVO & § 34 Bundesdatenschutzgesetz (BDSG)",
+    "deadline": "Within first 60 days of opening bank accounts and signing utility/telecom contracts",
+    "trap_warning": "Landlords and utility providers routinely demand a 'Schufa-Auskunft'. Schufa aggressively pushes a €29.95 commercial package on their website, hiding the fact that under EU GDPR Article 15, you have a statutory right to order a completely free detailed copy ('Datenkopie nach Art. 15 DSGVO'). Furthermore, new expats have a 'blank' score—opening multiple bank accounts, overdrafts, or store financing contracts within your first months can tank your credit rating before you even apply for an apartment.",
+    "action_steps": [
+      "Go to meineschufa.de and scroll down to 'Datenkopie nach Art. 15 DSGVO (kostenlos)'",
+      "Upload a copy of your passport and Meldebestätigung to verify identity",
+      "Inspect the postal report for incorrect address history, outdated bank accounts, or false negative entries",
+      "Avoid applying for multiple credit cards or consumer loans during your first 6 months in Germany"
+    ]
+  },
+  {
+    "id": "elterngeld-parental-allowance",
+    "title": "Elterngeld Application (State Parental Allowance)",
+    "description": "Apply for state parental compensation (65% to 67% of pre-birth net income, up to €1,800/month) for 12 to 14 months following the birth of a child.",
+    "urgency": "recommended",
+    "category": "Family & Social",
+    "conditions": {
+      "has_children": true
+    },
+    "legal_ref": "§ 1 & § 5 Abs. 1 Bundeselterngeld- und Elternzeitgesetz (BEEG)",
+    "deadline": "Strictly within 3 months of the child's birth (Back-pay is legally limited to 3 months)",
+    "trap_warning": "Elterngeld back-payments are capped by federal law at strictly 3 months retroactive from the month the application is received. If you wait until month 4 or 5 because of bureaucratic overwhelm, you permanently forfeit €1,800 to €3,600+ with zero legal recourse. Additionally, certain residence permits (§ 16b student, temporary § 25 permits) do not qualify unless you have held an eligible work permit for a specified duration.",
+    "action_steps": [
+      "Request the official birth certificate designated specifically for Elterngeld ('Geburtsurkunde für Elterngeld') from the Standesamt",
+      "Collect net earnings statements (Entgeltbescheinigungen) for the 12 months immediately preceding the birth month",
+      "Submit the completed state Elterngeld form (online via ElterngeldDigital or paper to the local Elterngeldstelle)",
+      "Coordinate parental leave months (Basiselterngeld vs ElterngeldPlus) between both parents to maximize combined allowances"
+    ]
+  },
+  {
+    "id": "kirchensteuer-declaration-optout",
+    "title": "Kirchensteuer (Church Tax) Declaration & Formal Opt-Out",
+    "description": "Verify your religious affiliation status on tax records to avoid automatic 8% to 9% payroll surcharges, or complete formal civil departure (Kirchenaustritt).",
+    "urgency": "recommended",
+    "category": "Taxes & Employment",
+    "conditions": {
+      "employment": "employed"
+    },
+    "legal_ref": "Art. 140 GG i.V.m. Art. 137 WRV & Landeskirchensteuergesetze",
+    "deadline": "During Anmeldung registration, or immediately upon first paycheck review",
+    "trap_warning": "During municipal Anmeldung, official registration forms include a question on religion. If you write 'Catholic', 'Protestant', or similar recognized denominations, the German state acts as a tax collector for religious bodies, deducting an additional 8% (Bavaria/Baden-Württemberg) or 9% (other states) of your income tax automatically every month. To stop this, you cannot simply tell HR or the church—you must appear in person at the Amtsgericht or Standesamt to execute a formal civil exit (Kirchenaustritt) and pay an administrative fee.",
+    "action_steps": [
+      "If you do not practice or wish to pay church tax, state 'keine Religion' (or '-' / 'ohne Bekenntnis') during your initial Anmeldung",
+      "If church tax (KiSt) is already deducted on your payslip, book an appointment for 'Kirchenaustritt' at your local Amtsgericht or Bürgeramt/Standesamt",
+      "Pay the €30–€50 municipal administrative exit fee and obtain the official departure certificate (Kirchenaustrittsbescheinigung)",
+      "Send a certified copy of the Kirchenaustrittsbescheinigung to your local Finanzamt to update your ELStAM digital tax record"
+    ]
+  },
+  {
+    "id": "wg-joint-liability-protection",
+    "title": "WG Joint Liability Defense (Gesamtschuldnerische Haftung)",
+    "description": "Protect yourself against joint financial liability for flatmates' unpaid rent, utility debts, or apartment damages in shared flats (WGs).",
+    "urgency": "critical",
+    "category": "Housing & Rent",
+    "conditions": {
+      "housing": "wg"
+    },
+    "legal_ref": "§ 421 BGB (Gesamtschuldner) & § 540 BGB (Gebrauchsüberlassung)",
+    "deadline": "Before signing any shared apartment contract",
+    "trap_warning": "If all flatmates sign a single rental agreement as joint main tenants (Hauptmieter), you are 'jointly and severally liable' (§ 421 BGB). If a roommate loses their job, stops paying rent, or abruptly leaves the country, the landlord has the full legal right to seize 100% of the rent, utility back-payments, and end-of-tenancy renovation damages directly from YOU. Furthermore, you cannot unilaterally terminate your portion of the lease without all other roommates and the landlord simultaneously agreeing in writing.",
+    "action_steps": [
+      "Whenever possible, sign an individual sublease agreement (Untermietvertrag) for your specific room with the main tenant, rather than a joint tenancy",
+      "If joint tenancy is unavoidable, execute a written internal agreement (Innenverhältnisvertrag) with all flatmates specifying room rent shares, deposit ownership, and dispute procedures",
+      "Require departing flatmates to obtain written confirmation of release (Entlassungsvereinbarung) from the landlord",
+      "Maintain documented move-in condition reports (Übergabeprotokoll) for common areas and your private bedroom"
+    ]
+  },
+  {
+    "id": "consumer-contract-monthly-cancellation",
+    "title": "Fair Consumer Contracts: Enforce 1-Month Termination Right",
+    "description": "Exercise your statutory right under federal consumer law to cancel auto-renewed subscriptions, internet, gym, and phone contracts on a monthly basis.",
+    "urgency": "optional",
+    "category": "Legal & Insurance",
+    "conditions": {},
+    "legal_ref": "§ 309 Nr. 9 BGB & § 312k BGB (Gesetz für faire Verbraucherverträge)",
+    "deadline": "At end of initial minimum term (Usually 12 or 24 months)",
+    "trap_warning": "Companies (gym chains, internet providers, mobile carriers, energy utilities) frequently exploit expat unfamiliarity with German contract law by claiming contracts automatically locked in for another full 12 or 24-month cycle upon missing an initial notice window. Under the Fair Consumer Contracts Act, any consumer contract signed after March 1, 2022 that exceeds its initial term may ONLY renew indefinitely with a maximum cancellation notice of one month. Any clause mandating a multi-month or annual renewal is legally null and void.",
+    "action_steps": [
+      "Check contract creation date: all contracts entered after March 1, 2022 are protected by § 309 Nr. 9 BGB",
+      "Use the mandatory statutory online cancellation button ('Verträge hier kündigen') required on all provider websites under § 312k BGB",
+      "If customer support claims you are locked in for another year, cite § 309 Nr. 9 BGB in writing and demand immediate confirmation of termination within 30 days",
+      "Revoke the SEPA direct debit mandate (SEPA-Lastschriftmandat) with your bank if unauthorized debits persist after your 1-month notice expiry"
+    ]
   }
 ]

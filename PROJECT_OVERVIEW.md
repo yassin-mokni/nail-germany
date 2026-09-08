@@ -63,10 +63,8 @@ The UI strictly adheres to a **utilitarian, brutally functional, terminal / gov.
 │   │   ├── TaskCard.tsx                # Task card with law references & "How They Screw You" traps
 │   │   ├── ProfileSummary.tsx          # Active expat dossier display
 │   │   └── UrgencyBadge.tsx            # Flat red / yellow / gray badges
-│   ├── data/
-│   │   └── tasks.json                  # Mirrored dataset for direct module imports
 │   ├── hooks/
-│   │   └── useFilteredTasks.ts         # Filtering engine matching tasks strictly against profile
+│   │   └── useFilteredTasks.ts         # Filtering engine matching tasks strictly against profile (imports @data/tasks.json)
 │   ├── store/
 │   │   └── useProfileStore.ts          # Zustand store with localStorage persistence
 │   └── types/
@@ -136,6 +134,14 @@ The database includes realistic, high-impact bureaucratic obligations and the le
 | `sperrkonto-blocked-account-unfreeze` | Sperrkonto (Blocked Account) Activation | Critical | `origin: "non-eu"`<br>`employment: "student"` | § 16b AufenthG | Providers lock the €11k+ funds until an official Meldebestätigung and German IBAN are submitted. |
 | `steuerklasse-optimization` | Steuerklasse Optimization for Married Couples | Recommended | `employment: "employed"`<br>`marital_status: "married"` | § 38b EStG | Default is Class IV/IV. If income is unequal, switching to III/V saves hundreds of euros monthly from wage withholding. |
 | `probezeit-kuendigungsschutz` | Probezeit & Dismissal Protection Protocol | Optional | `employment: "employed"` | § 622 BGB / § 1 KSchG | In 6-month probation, termination requires only 2 weeks' notice without cause. After 6 months, statutory dismissal protection activates. |
+| `health-insurance-transition` | Statutory Health Insurance Transition & Expat Insurance Trap | Critical | Universal (`{}`) | § 5 SGB V / § 193 VVG | Cheap inbound expat policies (Mawista, Care Concept) are invalid for permanent visas and block subsequent public health insurance entry. |
+| `kita-gutschein-application` | Kita-Gutschein Application (Daycare Legal Entitlement) | Recommended | `has_children: true` | § 24 Abs. 2 SGB VIII | Spots have legal entitlement from age 1, but waitlists exceed a year if not requested 6–9 months ahead; parents can sue Jugendamt for damages. |
+| `steuer-id-retrieval-class-vi` | Steuer-ID Retrieval & Tax Class VI Penalty Prevention | Critical | `employment: "employed"` | § 139b AO / § 39c EStG | If 11-digit ID is not given to HR before first payroll cutoff, employers are legally mandated to deduct ~45-50% under Tax Class VI. |
+| `schufa-free-art15-datenkopie` | Schufa Credit Record & Free GDPR Data Copy (Art. 15 DSGVO) | Recommended | Universal (`{}`) | Art. 15 DSGVO / § 34 BDSG | Schufa charges €29.95 commercially while legally required to give a 100% free data copy under GDPR; new arrivals have vulnerable blank scores. |
+| `elterngeld-parental-allowance` | Elterngeld Application (State Parental Allowance) | Recommended | `has_children: true` | § 1 / § 5 BEEG | Replaces 65-67% of net pay (up to €1,800/mo), but retroactive claims strictly expire after 3 months; certain permit types are excluded. |
+| `kirchensteuer-declaration-optout` | Kirchensteuer (Church Tax) Declaration & Formal Opt-Out | Recommended | `employment: "employed"` | Art. 140 GG / KiStG | Checking a religion on Anmeldung causes 8-9% extra tax withheld automatically; stopping it requires formal civil Kirchenaustritt. |
+| `wg-joint-liability-protection` | WG Joint Liability Defense (Gesamtschuldnerische Haftung) | Critical | `housing: "wg"` | § 421 / § 540 BGB | Main tenants in shared flats are 100% jointly liable if a roommate flees or defaults, and cannot unilaterally terminate their share. |
+| `consumer-contract-monthly-cancellation` | Fair Consumer Contracts: Enforce 1-Month Termination Right | Optional | Universal (`{}`) | § 309 Nr. 9 BGB | Subscriptions signed after March 2022 cannot lock in for another full year upon auto-renewal; termination notice is strictly 1 month. |
 
 ---
 

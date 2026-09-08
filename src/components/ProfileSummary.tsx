@@ -35,14 +35,14 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ onEdit }) => {
         <div className="flex items-center gap-2">
           <span className="w-3 h-3 bg-black inline-block" />
           <h2 className="font-mono font-bold text-sm tracking-wider uppercase">
-            ACTIVE EXPAT DOSSIER // PROFILE PARAMETERS
+            ACTIVE EXPAT PROFILE
           </h2>
         </div>
         <button
           onClick={onEdit}
           className="no-print font-mono text-xs font-bold px-3 py-1 bg-black text-white hover:bg-yellow-400 hover:text-black border-2 border-black cursor-pointer transition-none self-start sm:self-auto"
         >
-          [RECONFIGURE PROFILE]
+          [EDIT PROFILE]
         </button>
       </div>
 

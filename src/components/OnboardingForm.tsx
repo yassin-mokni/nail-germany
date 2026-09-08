@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Origin, Employment, Housing, MaritalStatus, UserProfile } from "@/types";
+import { Origin, Employment, Housing, MaritalStatus } from "@/types";
 import { useProfileStore } from "@/store/useProfileStore";
 
 interface OnboardingFormProps {
@@ -64,7 +64,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
       <div className="border-4 border-black bg-white p-6 mb-8">
         <div className="font-mono text-xs font-bold text-gray-700 uppercase tracking-widest mb-1 flex items-center gap-2">
           <span className="w-2.5 h-2.5 bg-black" />
-          <span>FORMULAR AZ-2026 // MANDATORY INTAKE SURVEY</span>
+          <span>EXPAT PROFILE QUESTIONNAIRE</span>
         </div>
         <h2 className="text-3xl md:text-4xl font-black uppercase text-black tracking-tight font-sans">
           Configure Your Expat Profile
@@ -415,7 +415,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
                 )}
               </div>
               <p className="text-xs text-gray-700 font-mono mt-1">
-                Data persists exclusively in client-side localStorage. No external telemetry.
+                Your profile is saved locally in your browser. No tracking or accounts.
               </p>
             </div>
 
@@ -428,7 +428,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
                   : "bg-gray-200 text-gray-500 border-gray-400 cursor-not-allowed"
               }`}
             >
-              GENERATE DEFENSE DOSSIER →
+              VIEW YOUR CHECKLIST →
             </button>
           </div>
         </div>

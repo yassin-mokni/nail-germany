@@ -17,7 +17,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
     categories,
     totalCount,
     completedCount,
-    pendingCount,
     criticalPendingCount,
     progressPercentage,
   } = useFilteredTasks();
@@ -85,10 +84,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
               <span className="text-2xl font-black bg-black text-white px-2 py-0.5">!</span>
               <div>
                 <span className="font-black text-sm uppercase tracking-wider block">
-                  CRITICAL ADMINISTRATIVE THREAT DETECTED
+                  CRITICAL STATUTORY DEADLINES PENDING
                 </span>
                 <span className="text-xs text-red-100 font-bold">
-                  You have {criticalPendingCount} mandatory bureaucratic obligation(s) pending with strict statutory fines or visa invalidation risks.
+                  You have {criticalPendingCount} mandatory obligation(s) pending with statutory fines or visa invalidation risks.
                 </span>
               </div>
             </div>
@@ -110,10 +109,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b-2 border-black">
           <div>
             <span className="font-mono text-xs font-bold text-gray-700 uppercase tracking-widest block">
-              COMPLIANCE & PROTECTION STATUS
+              STATUS & PROGRESS
             </span>
             <h2 className="text-2xl md:text-3xl font-black uppercase text-black font-sans">
-              Defense Protocol Checklist
+              Expat Survival Checklist
             </h2>
           </div>
 
@@ -143,7 +142,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
         {/* Utilitarian Progress Bar */}
         <div className="mt-4">
           <div className="flex justify-between font-mono text-xs font-bold mb-1">
-            <span>PROGRESS RATIO: {completedCount} / {totalCount} DIRECTIVES SECURED</span>
+            <span>PROGRESS: {completedCount} OF {totalCount} TASKS COMPLETED</span>
             <span>{progressPercentage}%</span>
           </div>
           <div className="h-6 w-full border-2 border-black bg-gray-200 p-0.5">
@@ -274,15 +273,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
 
       {/* Task List Header */}
       <div className="flex items-center justify-between mb-3 px-1 font-mono text-xs font-bold text-gray-700 uppercase">
-        <span>SHOWING {displayedTasks.length} OF {totalCount} STRICTLY APPLICABLE OBLIGATIONS</span>
-        <span>CLIENT-ENFORCED FILTER</span>
+        <span>SHOWING {displayedTasks.length} OF {totalCount} RELEVANT TASKS</span>
       </div>
 
       {/* Task Items */}
       {displayedTasks.length === 0 ? (
         <div className="border-4 border-black bg-white p-8 text-center">
           <div className="font-mono text-lg font-bold text-black uppercase mb-2">
-            [!] NO DIRECTIVES MATCH CURRENT FILTER PARAMETERS
+            [!] NO TASKS MATCH CURRENT FILTERS
           </div>
           <p className="text-sm font-medium text-gray-700 mb-4 max-w-md mx-auto">
             Try clearing search queries or switching urgency/category filters.
@@ -318,10 +316,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
               Disclaimer: This application is a self-defense informational checklist compiled from public German statutes (BGB, BMG, AufenthG, EStG). It does not constitute formal legal counsel. For representation in court or formal landlord disputes, consult your local Mieterverein or an accredited Fachanwalt für Mietrecht / Arbeitsrecht.
             </p>
           </div>
-          <div className="text-right text-[11px] space-y-1">
-            <div className="text-black font-bold">OUTPUT: FULLY STATIC HTML/JS</div>
-            <div>STATE STORAGE: LOCALSTORAGE ONLY</div>
-            <div>TRACKING / TELEMETRY: ZERO</div>
+          <div className="text-right text-[11px] space-y-1 text-gray-700">
+            <div className="text-black font-bold">100% PRIVATE & LOCAL</div>
+            <div>Data stays in your browser.</div>
+            <div>No tracking or accounts.</div>
           </div>
         </div>
       </footer>

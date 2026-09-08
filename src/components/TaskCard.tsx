@@ -30,7 +30,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
         }`}
       >
         <div className="flex items-center gap-3 flex-wrap">
-          <span className="font-bold">ORD-#{String(index + 1).padStart(2, "0")}</span>
+          <span className="font-bold">TASK #{String(index + 1).padStart(2, "0")}</span>
           <UrgencyBadge urgency={task.urgency} />
           <span className="border border-black px-2 py-0.5 bg-white uppercase text-[11px] font-bold">
             {task.category}
@@ -74,7 +74,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
 
               {isCompleted ? (
                 <span className="font-mono text-xs font-bold px-2 py-0.5 bg-black text-white self-start">
-                  [✓ SECURED / COMPLETED]
+                  [✓ COMPLETED]
                 </span>
               ) : (
                 task.deadline && (
@@ -91,12 +91,16 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
 
             {/* Bureaucracy Trap Warning */}
             {task.trap_warning && (
-              <div className="mt-4 border-2 border-black bg-yellow-400 p-3 text-black">
-                <div className="flex items-center gap-1.5 font-mono text-xs font-black uppercase tracking-wider mb-1">
-                  <span>⚠️</span>
+              <div className="mt-4 border-2 border-black bg-amber-50">
+                <div className="bg-black text-amber-300 px-3 py-1.5 font-mono text-xs font-black uppercase tracking-wider flex items-center gap-2 border-b-2 border-black">
+                  <span className="bg-amber-400 text-black px-1.5 py-0.5 text-[10px] font-black">
+                    ! TRAP
+                  </span>
                   <span>HOW THEY SCREW YOU (THE BUREAUCRACY TRAP)</span>
                 </div>
-                <p className="text-sm font-semibold leading-normal">{task.trap_warning}</p>
+                <p className="p-3 text-sm font-medium leading-relaxed text-black">
+                  {task.trap_warning}
+                </p>
               </div>
             )}
 
@@ -105,7 +109,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
               <div className="mt-4 border-t-2 border-black pt-3">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-mono text-xs font-bold uppercase tracking-wider text-black">
-                    STANDARD OPERATING PROCEDURE ({task.action_steps.length} STEPS):
+                    ACTION STEPS ({task.action_steps.length}):
                   </span>
                   <button
                     onClick={() => setIsExpanded(!isExpanded)}

@@ -13,17 +13,15 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
 
   return (
     <header className="border-b-4 border-black bg-white w-full">
-      {/* Top Gov/Terminal Meta Bar */}
+      {/* Top Gov Meta Bar */}
       <div className="bg-black text-white px-4 py-1.5 font-mono text-xs flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-2">
-          <span className="inline-block w-2.5 h-2.5 bg-red-600 animate-pulse" />
           <span className="font-bold tracking-widest">
-            BUNDESREPUBLIK EXPAT SURVIVAL PROTOCOL // NAIL GERMANY
+            NAIL GERMANY // EXPAT BUREAUCRACY PROTOCOL
           </span>
         </div>
-        <div className="flex items-center gap-4 text-gray-300 text-[11px]">
-          <span>STATUS: OFFLINE-READY [STATIC]</span>
-          <span>DIRECTIVE: ZERO-EXPLOITATION</span>
+        <div className="text-gray-400 text-[11px]">
+          <span>UPDATED FOR 2026 REGULATIONS</span>
         </div>
       </div>
 
