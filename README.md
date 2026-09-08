@@ -32,6 +32,16 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
   - `bg-yellow-400` (Recommended)
   - `bg-gray-200` (Optional / Informational)
 
+## Deployment (Netlify)
+
+The project is hosted at **[nail-germany.mokni.dev](https://nail-germany.mokni.dev)**.
+
+- **Platform**: Netlify (Static Export)
+- **Configuration**: [netlify.toml](./netlify.toml)
+- **Build Command**: `npm run build`
+- **Publish Directory**: `out`
+- **Canonical Domain**: `https://nail-germany.mokni.dev`
+
 ---
 
 ## Detailed Documentation
