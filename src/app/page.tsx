@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { OnboardingForm } from "@/components/OnboardingForm";
 import { Dashboard } from "@/components/Dashboard";
 import { Footer } from "@/components/Footer";
+import { DirectoryIndex } from "@/components/DirectoryIndex";
 import { useProfileStore } from "@/store/useProfileStore";
 
 const emptySubscribe = () => () => {};
@@ -17,6 +18,27 @@ export default function HomePage() {
     () => false
   );
   const [isEditingProfile, setIsEditingProfile] = useState(false);
+
+  const webAppSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Nail Germany | German Bureaucracy Checklist",
+    description:
+      "A clear, practical guide for expats moving to and living in Germany. Stay on top of your Anmeldung, rental rights, health insurance, and taxes. Built by Yassin.",
+    url: "https://nail-germany.mokni.dev",
+    applicationCategory: "UtilityApplication",
+    operatingSystem: "Any",
+    author: {
+      "@type": "Person",
+      name: "Yassin",
+      url: "https://mokni.dev",
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+    },
+  };
 
   // During SSR or before hydration, render a minimal brutalist loading frame to avoid hydration mismatch
   if (!mounted) {
@@ -56,6 +78,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white text-black flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+      />
+
       <Header
         showReconfigure={!showOnboarding}
         onReconfigure={handleEditProfile}
@@ -67,6 +94,8 @@ export default function HomePage() {
         ) : (
           <Dashboard onReconfigure={handleEditProfile} />
         )}
+
+        <DirectoryIndex />
       </main>
 
       <Footer />

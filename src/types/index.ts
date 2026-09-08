@@ -23,6 +23,16 @@ export interface TaskConditions {
   state?: Bundesland | Bundesland[];
 }
 
+export interface TaskFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface TaskOfficialLink {
+  title: string;
+  url: string;
+}
+
 export interface TaskItem {
   id: string;
   title: string;
@@ -34,6 +44,11 @@ export interface TaskItem {
   deadline?: string;
   trap_warning?: string;
   action_steps?: string[];
+  estimated_time?: string;
+  costs_fines?: string;
+  official_links?: TaskOfficialLink[];
+  keywords?: string[];
+  faq?: TaskFAQ[];
 }
 
 export interface UserProfile {
