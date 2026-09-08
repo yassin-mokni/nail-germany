@@ -84,10 +84,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
               <span className="text-2xl font-black bg-black text-white px-2 py-0.5">!</span>
               <div>
                 <span className="font-black text-sm uppercase tracking-wider block">
-                  CRITICAL STATUTORY DEADLINES PENDING
+                  TIME-SENSITIVE TASKS PENDING
                 </span>
                 <span className="text-xs text-red-100 font-bold">
-                  You have {criticalPendingCount} mandatory obligation(s) pending with statutory fines or visa invalidation risks.
+                  You have {criticalPendingCount} high-priority task(s) pending (deadlines, fines, or visa requirements may apply).
                 </span>
               </div>
             </div>
@@ -112,7 +112,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
               STATUS & PROGRESS
             </span>
             <h2 className="text-2xl md:text-3xl font-black uppercase text-black font-sans">
-              Expat Survival Checklist
+              German Bureaucracy Checklist
             </h2>
           </div>
 
@@ -123,7 +123,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
               <span className="text-2xl font-black text-black">{totalCount}</span>
             </div>
             <div className="border-2 border-black p-2 bg-gray-50">
-              <span className="text-[10px] text-gray-700 block uppercase font-bold">SECURED</span>
+              <span className="text-[10px] text-gray-700 block uppercase font-bold">COMPLETED</span>
               <span className="text-2xl font-black text-black">{completedCount}</span>
             </div>
             <div className={`border-2 border-black p-2 ${criticalPendingCount > 0 ? "bg-red-100" : "bg-gray-50"}`}>
@@ -310,10 +310,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onReconfigure }) => {
         <div className="flex flex-col md:flex-row justify-between gap-4">
           <div>
             <span className="font-bold text-black block mb-1">
-              NAIL GERMANY // BUNDESREPUBLIK EXPAT SURVIVAL PROTOCOL
+              NAIL GERMANY // GERMAN BUREAUCRACY CHECKLIST
             </span>
             <p className="text-[11px] leading-relaxed max-w-xl text-gray-700">
-              Disclaimer: This application is a self-defense informational checklist compiled from public German statutes (BGB, BMG, AufenthG, EStG). It does not constitute formal legal counsel. For representation in court or formal landlord disputes, consult your local Mieterverein or an accredited Fachanwalt für Mietrecht / Arbeitsrecht.
+              Disclaimer: This guide is for informational purposes and references German statutes (BGB, BMG, AufenthG, EStG). It is not formal legal advice. For specific disputes or court representation, consult a registered Mieterverein or a licensed lawyer (Fachanwalt).
             </p>
           </div>
           <div className="text-right text-[11px] space-y-1 text-gray-700">

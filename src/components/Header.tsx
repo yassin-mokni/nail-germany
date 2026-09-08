@@ -17,11 +17,11 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
       <div className="bg-black text-white px-4 py-1.5 font-mono text-xs flex flex-wrap justify-between items-center gap-2">
         <div className="flex items-center gap-2">
           <span className="font-bold tracking-widest">
-            NAIL GERMANY // EXPAT BUREAUCRACY PROTOCOL
+            NAIL GERMANY // RELOCATION & BUREAUCRACY GUIDE
           </span>
         </div>
         <div className="text-gray-400 text-[11px]">
-          <span>UPDATED FOR 2026 REGULATIONS</span>
+          <span>UPDATED FOR 2026</span>
         </div>
       </div>
 
@@ -29,13 +29,13 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
       <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <div className="inline-block bg-black text-white font-mono text-xs px-2 py-0.5 font-bold uppercase mb-2">
-            Legal Self-Defense Framework
+            Practical Expat Checklist
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight text-black uppercase font-sans">
             Nail Germany
           </h1>
           <p className="mt-2 text-base md:text-lg text-black font-medium max-w-2xl leading-snug">
-            Expat survival engine. Don’t get screwed by landlords, predatory employers, or German bureaucracy.
+            A clear, honest guide to moving to and living in Germany. Know your rights, avoid costly mistakes with landlords or health insurance, and get your paperwork done on time.
           </p>
         </div>
 
@@ -52,9 +52,9 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
           <button
             onClick={() => window.print()}
             className="px-3 py-2 border-2 border-black bg-white hover:bg-black hover:text-white font-bold transition-none cursor-pointer"
-            title="Print dossier for offline appointment"
+            title="Print checklist for offline use"
           >
-            [⎙ PRINT PROTOCOL]
+            [⎙ PRINT CHECKLIST]
           </button>
           <button
             onClick={() => {

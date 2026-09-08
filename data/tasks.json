@@ -1,151 +1,153 @@
 [
   {
     "id": "kindergeld-application",
-    "title": "Kindergeld Application (State Child Support Benefit)",
-    "description": "Apply for €250/month per child via the Familienkasse. As a married couple with dependent children, you are legally entitled to receive state child benefits from month one of residency.",
+    "title": "Kindergeld (Child Benefit Application)",
+    "description": "Apply for 250 EUR per month per child through the Familienkasse. Parents living in Germany are entitled to child benefits from their first month of residence.",
     "urgency": "recommended",
     "category": "Family & Social",
     "conditions": {
       "has_children": true,
       "marital_status": "married"
     },
-    "legal_ref": "§ 32 EStG / Bundeskindergeldgesetz (BKGG)",
-    "deadline": "Within first 6 months (Back-pay is strictly capped at 6 months retroactive)",
-    "trap_warning": "Expats assume Kindergeld is paid automatically with taxes. It is NOT. If you delay filing past 6 months, the Familienkasse permanently forfeits all back-payments prior to that window. You lose thousands of euros.",
+    "legal_ref": "§ 32 EStG / BKGG",
+    "deadline": "Within your first 6 months. Back-pay is capped at 6 months retroactive.",
+    "trap_warning": "Kindergeld is never paid automatically. You have to submit the forms yourself. The Familienkasse only pays up to 6 months of back-pay from the date they receive your application. If you wait 9 months to file, you permanently lose the first 3 months of money.",
     "action_steps": [
-      "Obtain birth certificate (Geburtsurkunde) translated into German or international format",
-      "Collect Tax IDs (Steuer-ID) for both spouses and each child",
-      "Submit official form 'Antrag auf Kindergeld (KG 1)' + Annex Child (Anlage Kind) to your local Familienkasse"
+      "Get your child's birth certificate (with a German translation or international version).",
+      "Get the German Tax ID (Steuer-ID) for yourself, your partner, and each child.",
+      "Fill out form 'Antrag auf Kindergeld (KG 1)' and 'Anlage Kind', then mail them to your local Familienkasse."
     ]
   },
   {
     "id": "rundfunkbeitrag-registration",
-    "title": "Rundfunkbeitrag (Mandatory Public Broadcasting Fee)",
-    "description": "Register or link your household to ARD ZDF Deutschlandradio Beitragsservice (€18.36/month per apartment).",
+    "title": "Rundfunkbeitrag (TV and Radio Fee)",
+    "description": "Register your home with ARD ZDF Deutschlandradio Beitragsservice (18.36 EUR per month per apartment).",
     "urgency": "critical",
     "category": "Housing & Media",
     "conditions": {
       "housing": ["own_apartment", "wg"]
     },
-    "legal_ref": "§ 2 Abs. 1 Rundfunkbeitragsstaatsvertrag (RBStV)",
-    "deadline": "Within 30 days of receiving official letter after Anmeldung",
-    "trap_warning": "The fee is per residence, NOT per occupant. If you move into a WG (shared flat), your flatmates are likely already paying. If you ignore the registration letter instead of replying with your flatmate's existing 9-digit Beitragsnummer, they will create a duplicate account in your name and escalate to debt collectors (Inkasso / Gerichtsvollzieher).",
+    "legal_ref": "§ 2 Abs. 1 RBStV",
+    "deadline": "Within 30 days of moving in or getting your registration letter.",
+    "trap_warning": "This fee is charged per apartment, not per person. If you move into a flatshare (WG), someone is likely already paying it. If you ignore the letters instead of replying with your flatmate's 9-digit Beitragsnummer, they will open a new account in your name and eventually send debt collection.",
     "action_steps": [
-      "If in a WG: Ask the main tenant or roommate for their 9-digit 'Beitragsnummer'",
-      "Go to rundfunkbeitrag.de and respond: either select 'Anmelden' (new account) or 'Wohnung abmelden / Zu einer anderen Person ziehen' with their number",
-      "Keep digital proof of submission to prevent unlawful debt collection enforcement"
+      "If you live in a WG, ask your flatmates for their 9-digit Beitragsnummer.",
+      "Go to rundfunkbeitrag.de. If someone already pays, select 'Wohnung abmelden / Zu einer anderen Person ziehen' and enter their number.",
+      "If nobody pays in your apartment yet, register a new account (Anmelden).",
+      "Save your confirmation page or email as proof."
     ]
   },
   {
     "id": "rechtsschutzversicherung-contract",
-    "title": "Rechtsschutzversicherung (Legal Protection Insurance)",
-    "description": "Secure comprehensive legal defense coverage covering Tenancy (Mietrecht) and Employment (Arbeitsrecht) before signing long-term contracts or disputing landlords.",
+    "title": "Legal Insurance (Rechtsschutzversicherung)",
+    "description": "Get legal insurance covering tenancy (Mietrecht) and employment (Arbeitsrecht) before you run into disputes.",
     "urgency": "recommended",
     "category": "Legal & Insurance",
     "conditions": {},
-    "legal_ref": "§ 1 ff. VVG / ARB 2021",
-    "deadline": "Immediate (Must be active 3 months BEFORE any dispute arises)",
-    "trap_warning": "95% of legal insurance policies impose a strict 3-month waiting period (Wartezeit). If your landlord sends an illegal eviction or rent hike, or your employer initiates termination during probation before your policy is 3 months old, no insurer will cover attorney fees or court costs.",
+    "legal_ref": "§ 1 ff. VVG / ARB",
+    "deadline": "Sign up early. Most policies have a 3-month waiting period before coverage starts.",
+    "trap_warning": "Almost all legal insurance policies require a 3-month waiting period (Wartezeit) for rental and workplace issues. If your landlord increases your rent or your employer threatens termination before that window passes, the insurer will not pay for your lawyer.",
     "action_steps": [
-      "Select a policy that explicitly includes 'Mietrecht' (tenancy) and 'Arbeitsrecht' (employment)",
-      "Ensure deductible (Selbstbeteiligung) is between €150 and €300 to keep premiums sensible",
-      "Never mention pre-existing disagreements when establishing the start date"
+      "Choose a policy that includes Mietrecht (tenancy) and Arbeitsrecht (employment).",
+      "Pick a deductible (Selbstbeteiligung) around 150 to 300 EUR to keep monthly costs reasonable.",
+      "Do not wait until a dispute has already started, as existing conflicts are excluded from coverage."
     ]
   },
   {
     "id": "mieterverein-membership",
-    "title": "Mieterverein (Tenants' Association Membership)",
-    "description": "Join your municipal tenants' union (e.g., Berliner Mieterverein, Mieterverein München) for free legal review of leases, rent control violations, and utility bills.",
+    "title": "Join a Tenants' Association (Mieterverein)",
+    "description": "Join your local tenants' union for contract checks, rent control advice, and help disputing utility bills.",
     "urgency": "recommended",
     "category": "Housing & Rent",
     "conditions": {
       "housing": ["own_apartment", "wg"]
     },
-    "legal_ref": "§ 556d BGB (Mietpreisbremse) & § 556 Abs. 3 BGB (Nebenkosten)",
-    "deadline": "Within first month of move-in",
-    "trap_warning": "Over 70% of utility bills (Nebenkostenabrechnungen) issued to foreign tenants contain illegal cost items. Landlords count on expats not knowing what can be legally passed on (e.g., building repairs and administrative fees are 100% landlord responsibility). A single Mieterverein demand letter routinely recovers €500–€2,000.",
+    "legal_ref": "§ 556d BGB (Mietpreisbremse) & § 556 BGB (Nebenkosten)",
+    "deadline": "Join within your first month of renting.",
+    "trap_warning": "Yearly utility bills (Nebenkostenabrechnung) frequently include charges that landlords cannot legally pass to tenants, such as building repairs or management fees. A single formal letter from a Mieterverein lawyer often recovers hundreds of euros in unfair charges.",
     "action_steps": [
-      "Enroll in your local city Mieterverein (approx. €80–€110 annual fee, tax-deductible)",
-      "Upload your rental contract for formal inspection against the local rent index (Mietspiegel)",
-      "Have their in-house lawyer draft formal objection letters whenever unexpected charges arrive"
+      "Sign up with your city's Mieterverein (usually 80 to 110 EUR per year, which is tax-deductible).",
+      "Send them your rental contract to check if your rent violates local caps (Mietpreisbremse).",
+      "Have their legal team review your yearly utility bill whenever your landlord asks for extra payment."
     ]
   },
   {
     "id": "anmeldung-residence-registration",
-    "title": "Anmeldung (Official Residence Registration)",
-    "description": "Register your physical address at the municipal Bürgeramt/Einwohneramt. This is the cornerstone of all civil life in Germany.",
+    "title": "Anmeldung (City Address Registration)",
+    "description": "Register your address at the local Bürgeramt. You need this to get a tax ID, open most bank accounts, and set up health insurance.",
     "urgency": "critical",
     "category": "Immigration & Legal",
     "conditions": {},
     "legal_ref": "§ 17 Bundesmeldegesetz (BMG)",
-    "deadline": "Strict 14 calendar days from the move-in date on your certificate",
-    "trap_warning": "Without an official Meldebestätigung, you cannot open a compliant bank account, obtain a Tax Identification Number (Steuer-ID), or receive public health insurance cards. Rogue subletters who refuse to issue a Wohnungsgeberbestätigung are subletting illegally—you will be stranded with zero legal address and risk up to €1,000 in municipal administrative fines. Furthermore, casually declaring childhood baptism on the registration form triggers automatic 8%–9% payroll church tax deductions.",
+    "deadline": "Within 14 calendar days of your move-in date.",
+    "trap_warning": "If your landlord or sublessor refuses to give you a signed Wohnungsgeberbestätigung, they are probably subletting illegally. Without this document you cannot register your address, leaving you without a tax ID or bank account. Also, pay attention to the religion question on the form: writing Catholic or Protestant will trigger an automatic 8% to 9% church tax on your salary.",
     "action_steps": [
-      "Obtain the signed 'Wohnungsgeberbestätigung' (Landlord Confirmation) directly from the landlord/sublessor",
-      "Book an appointment (Bürgeramt Termin) immediately upon signing",
-      "Bring your passport, rental lease, and signed Wohnungsgeberbestätigung",
-      "On the registration form, check the 'Religionsgesellschaft' field: write 'keine Religion' (or '-') unless you actively intend to pay 8%–9% of your income tax to the Catholic or Protestant church",
-      "Safely archive the paper 'Meldebestätigung'—do not lose it"
+      "Get the signed Wohnungsgeberbestätigung directly from your landlord or main tenant.",
+      "Book an appointment at any Bürgeramt in your city as early as possible.",
+      "Bring your passport, rental contract, and the signed Wohnungsgeberbestätigung.",
+      "On the form, write 'keine Religion' or '-' under religion unless you actively want to pay church tax.",
+      "Keep the stamped Meldebestätigung paper safe. You will need it for almost every other setup step."
     ]
   },
   {
     "id": "aufenthaltstitel-work-permit",
-    "title": "Aufenthaltstitel & Work Permit (Ausländerbehörde)",
-    "description": "Convert entry visa into a long-term residence permit (Blue Card / ICT / Skilled Worker Visa) before Schengen or national D-visa expires.",
+    "title": "Residence Permit & Work Authorization (Aufenthaltstitel)",
+    "description": "Convert your national entry visa into a long-term residence permit (such as a Blue Card or Skilled Worker permit) before your visa expires.",
     "urgency": "critical",
     "category": "Immigration & Legal",
     "conditions": {
       "origin": "non-eu"
     },
-    "legal_ref": "§ 18b AufenthG / § 81 Abs. 4 AufenthG (Fiktionswirkung)",
-    "deadline": "At least 8 to 12 weeks prior to entry visa expiry",
-    "trap_warning": "If your entry visa expires before your appointment and you do not possess written proof of application (Fiktionsbescheinigung or confirmation email under § 81 AufenthG), your legal permission to work lapses immediately. HR departments are legally forced to suspend you without pay.",
+    "legal_ref": "§ 18b / § 81 Abs. 4 AufenthG (Fiktionswirkung)",
+    "deadline": "Apply at least 8 to 12 weeks before your entry visa runs out.",
+    "trap_warning": "If your entry visa expires and you have no written proof of an active application (such as a Fiktionsbescheinigung or an official confirmation email under § 81 AufenthG), your legal right to work stops immediately. HR has to suspend you without pay until your status is resolved.",
     "action_steps": [
-      "Submit electronic appointment request via Ausländerbehörde portal; save confirmation screenshot with timestamp",
-      "Prepare Declaration of Employment (Erklärung zum Beschäftigungsverhältnis) signed by HR",
-      "Demand an emergency Fiktionsbescheinigung if processing extends past visa expiration"
+      "Submit your appointment request online through your local immigration office portal.",
+      "Save a screenshot and email confirmation showing the date and time of your request.",
+      "Have your employer fill out the Erklärung zum Beschäftigungsverhältnis form.",
+      "If your appointment is scheduled after your visa expires, request a formal Fiktionsbescheinigung as interim proof."
     ]
   },
   {
     "id": "mietkaution-three-installments",
-    "title": "Mietkaution: Enforce Statutory 3-Installment Right",
-    "description": "Never pay 3 months rental deposit upfront before move-in. Exercise your statutory right to split the deposit across 3 monthly installments.",
+    "title": "Rental Deposit: Pay in 3 Installments (Mietkaution)",
+    "description": "You do not have to pay your full 3-month rental deposit before move-in. Federal law allows you to split it across 3 monthly payments.",
     "urgency": "critical",
     "category": "Housing & Rent",
     "conditions": {
       "housing": ["own_apartment", "wg"]
     },
     "legal_ref": "§ 551 Abs. 2 BGB (Statutory Right to Installments)",
-    "deadline": "Installment 1 due at move-in; Installments 2 & 3 due with subsequent monthly rent payments",
-    "trap_warning": "Landlords and agencies regularly bully foreign expats into transferring the full 3-month deposit before releasing keys. Clauses requiring full advance deposit in leases are null and void (unwirksam) by federal law. Furthermore, landlords must deposit it into an insolvency-protected escrow account (Mietkautionskonto) earning interest.",
+    "deadline": "Payment 1 at move-in; payments 2 and 3 with your next two rent payments.",
+    "trap_warning": "Landlords and agents often demand the entire 3-month deposit before handing over keys. Lease clauses requiring the full deposit upfront are legally invalid (§ 551 BGB). Landlords must also keep your money in an insolvency-protected escrow account separate from their personal funds.",
     "action_steps": [
-      "Pay only the 1st installment (1/3 of deposit) on the first day of the tenancy",
-      "Pay installment 2 and 3 strictly alongside the 2nd and 3rd month's rent payments",
-      "Demand written proof that funds are held in a segregated escrow account separated from landlord assets"
+      "Pay only the first installment (one-third of the deposit) on the first day of your lease.",
+      "Pay the remaining two installments alongside your second and third monthly rent payments.",
+      "Ask your landlord for written proof that the funds are in a dedicated escrow account (Mietkautionskonto)."
     ]
   },
   {
     "id": "freelance-tax-registration",
-    "title": "Fragebogen zur steuerlichen Erfassung (Freelance Steuernummer)",
-    "description": "Submit initial tax registration to the Finanzamt via ELSTER to receive your freelance Steuernummer and VAT ID (USt-IdNr).",
+    "title": "Freelance Tax Registration (Fragebogen zur steuerlichen Erfassung)",
+    "description": "Register your freelance work with the Finanzamt via ELSTER to get your freelance tax number (Steuernummer) and VAT ID.",
     "urgency": "critical",
     "category": "Taxes & Employment",
     "conditions": {
       "employment": "freelance"
     },
     "legal_ref": "§ 138 Abgabenordnung (AO)",
-    "deadline": "Within 4 weeks of commencing freelance or self-employed activity",
-    "trap_warning": "You cannot legally issue invoices with VAT or claim legitimate business deductions until the Finanzamt issues your freelance Steuernummer. Invoicing with only your personal Steuer-ID will cause clients to reject payment or trigger audits.",
+    "deadline": "Within 4 weeks of starting your self-employed or freelance work.",
+    "trap_warning": "You cannot issue compliant invoices with VAT or claim business deductions until the tax office gives you a freelance Steuernummer. Your personal 11-digit Steuer-ID is not enough for business invoices.",
     "action_steps": [
-      "Create an ELSTER account using your personal Steuer-ID (obtained from Anmeldung)",
-      "Fill out the questionnaire 'Fragebogen zur steuerlichen Erfassung'",
-      "Decide on Kleinunternehmerregelung (§ 19 UStG) vs standard VAT accounting based on projected revenue"
+      "Set up an account on elster.de using your personal Steuer-ID.",
+      "Complete the online questionnaire 'Fragebogen zur steuerlichen Erfassung'.",
+      "Choose whether to use the small business rule (Kleinunternehmerregelung under § 19 UStG) or standard VAT reporting."
     ]
   },
   {
     "id": "sperrkonto-blocked-account-unfreeze",
-    "title": "Sperrkonto (Blocked Account) Activation & Monthly Payouts",
-    "description": "Unfreeze your blocked study funds (€11,904/year standard) and link payouts to a local SEPA checking account (Girokonto).",
+    "title": "Unfreeze Your Blocked Account (Sperrkonto)",
+    "description": "Activate your blocked student funds and connect monthly payouts to a German checking account (Girokonto).",
     "urgency": "critical",
     "category": "Finance & Study",
     "conditions": {
@@ -153,18 +155,18 @@
       "employment": "student"
     },
     "legal_ref": "§ 16b AufenthG (Proof of Financial Subsistence)",
-    "deadline": "Immediately upon arrival and bank account opening",
-    "trap_warning": "Blocked account providers (Coracle, Expatrio, Fintiba) will NOT release monthly living allowances without an official German Meldebestätigung and German IBAN. If you fail to secure Anmeldung quickly, you will run out of cash despite having €11k locked in escrow.",
+    "deadline": "Right after you complete your address registration (Anmeldung).",
+    "trap_warning": "Blocked account providers (such as Coracle, Expatrio, or Fintiba) cannot release your monthly living money until you upload a German address registration certificate and a local SEPA bank account. Delays with your Anmeldung mean you cannot access your own money.",
     "action_steps": [
-      "Open a fee-free student Girokonto (e.g. N26, DKB, or local Sparkasse/Commerzbank)",
-      "Upload your stamped Meldebestätigung and university matriculation certificate (Immatrikulationsbescheinigung) to provider app",
-      "Set up automatic monthly disbursement to cover student health insurance and rent"
+      "Open a fee-free student checking account (Girokonto) with a German IBAN.",
+      "Upload your stamped Meldebestätigung and university enrollment certificate to your provider portal.",
+      "Set up recurring monthly transfers to cover rent and health insurance."
     ]
   },
   {
     "id": "steuerklasse-optimization",
-    "title": "Steuerklasse (Tax Class) Optimization for Married Couples",
-    "description": "Switch from default Tax Class IV/IV to III/V or IV/IV with Factor at the Finanzamt if one spouse earns significantly more.",
+    "title": "Tax Class Switch for Married Couples (Steuerklasse III / V)",
+    "description": "If one partner earns significantly more, switch from default Tax Class IV / IV to III / V to increase monthly take-home pay.",
     "urgency": "recommended",
     "category": "Taxes & Employment",
     "conditions": {
@@ -172,53 +174,53 @@
       "marital_status": "married"
     },
     "legal_ref": "§ 38b Einkommensteuergesetz (EStG)",
-    "deadline": "Anytime before November 30 for the current fiscal year",
-    "trap_warning": "The state automatically defaults both spouses into Tax Class IV upon marriage registration. If there is a large income gap (e.g. 60/40 or higher), staying in Class IV means the state withholds hundreds of extra euros from your monthly paycheck until an annual tax return is filed a year later.",
+    "deadline": "Anytime before November 30 for the current tax year.",
+    "trap_warning": "Married couples automatically start in Tax Class IV / IV. If one partner earns 60% or more of the household income, staying in IV / IV means hundreds of extra euros are withheld from your salary each month until you file your annual tax return.",
     "action_steps": [
-      "Calculate joint net income using official BMF wage tax calculator",
-      "Submit 'Antrag auf Steuerklassenwechsel bei Ehegatten' through ELSTER or paper form to local Finanzamt",
-      "Note: Switching to III/V makes filing an annual income tax return (Steuererklärung) legally mandatory"
+      "Compare your net pay using the official BMF wage tax calculator.",
+      "Submit an application to change tax classes ('Antrag auf Steuerklassenwechsel') via ELSTER or paper form to your Finanzamt.",
+      "Remember that switching to III / V makes filing an annual income tax return mandatory."
     ]
   },
   {
     "id": "probezeit-kuendigungsschutz",
-    "title": "Probezeit & Kündigungsschutzgesetz Monitoring",
-    "description": "Understand your legal vulnerability during 6-month probation and monitor the exact day statutory dismissal protection activates.",
+    "title": "Probation Period & Dismissal Protection (Probezeit)",
+    "description": "Know when your 6-month probation period ends so you understand your rights if your job is at risk.",
     "urgency": "optional",
     "category": "Taxes & Employment",
     "conditions": {
       "employment": "employed"
     },
-    "legal_ref": "§ 622 Abs. 3 BGB & § 1 Abs. 1 Kündigungsschutzgesetz (KSchG)",
-    "deadline": "6 months from first day of employment",
-    "trap_warning": "During your 6-month probation (Probezeit), German labor law allows termination with only 2 weeks' notice without cause. Shady employers frequently terminate foreign workers on month 5 day 28 to avoid triggering the strict KSchG rules. Maintain written records of all performance reviews and verbal agreements.",
+    "legal_ref": "§ 622 Abs. 3 BGB & § 1 Abs. 1 KSchG",
+    "deadline": "6 months from your start date.",
+    "trap_warning": "During probation, an employer can fire you with two weeks notice and does not have to provide a legal reason. Some employers wait until the final days of month 5 to let someone go before strict statutory protections apply.",
     "action_steps": [
-      "Calendar the exact date of your 6-month work anniversary",
-      "Verify company has > 10 regular employees (threshold for KSchG applicability)",
-      "If terminated unlawfully after 6 months, you must file a lawsuit (Kündigungsschutzklage) within exactly 3 weeks"
+      "Mark your 6-month work anniversary on your calendar.",
+      "Check if your company has more than 10 regular employees (the threshold where the KSchG protection applies).",
+      "If you are fired after your 6-month mark without proper justification, you must file a lawsuit (Kündigungsschutzklage) within 3 weeks."
     ]
   },
   {
     "id": "health-insurance-transition",
-    "title": "Statutory Health Insurance Transition & Expat Insurance Trap",
-    "description": "Transition from temporary travel or expat policies (Mawista, Care Concept) into statutory (GKV) or full German private (PKV) health insurance.",
+    "title": "Get Proper Health Insurance (Avoid the Expat Policy Trap)",
+    "description": "Move from temporary travel or incoming insurance (like Mawista or Care Concept) to regular public (GKV) or full private (PKV) German health insurance.",
     "urgency": "critical",
     "category": "Legal & Insurance",
     "conditions": {},
     "legal_ref": "§ 5 Abs. 1 Nr. 1 SGB V & § 193 Abs. 3 VVG",
-    "deadline": "Within first 3 months of arrival or employment start",
-    "trap_warning": "Cheap inbound 'expat insurance' (e.g., Mawista, Care Concept) does not satisfy comprehensive statutory coverage under § 193 Abs. 3 VVG. Ausländerbehörde officers frequently reject these for Blue Cards and permanent residence. Worse, if you remain on expat insurance as a freelancer and later try to join public health insurance (TK, AOK), public funds are legally barred from taking you, leaving you trapped in costly private plans with back-payment penalties (Säumniszuschläge).",
+    "deadline": "Within your first 3 months in Germany.",
+    "trap_warning": "Short-term travel or expat policies do not qualify as comprehensive German health insurance (§ 193 VVG). Immigration offices often reject them for residence permits. If you stay on an expat policy while freelancing, public insurance funds (TK, AOK) can permanently refuse to take you back later, leaving you with expensive private coverage and back-payment penalties.",
     "action_steps": [
-      "If employed: Choose a statutory fund (Techniker Krankenkasse, AOK, Barmer) and give your membership certificate (Mitgliedsbescheinigung) to HR before your first paycheck",
-      "If freelance: Apply for voluntary public insurance (Freiwillige gesetzliche Krankenversicherung) strictly within 3 months of arriving if you had prior EU public insurance",
-      "Ensure the policy includes mandatory long-term nursing care insurance (Pflegepflichtversicherung)",
-      "Never cancel existing coverage until you have written acceptance from the new German insurer"
+      "If you are employed, pick a public fund (such as TK, Barmer, or AOK) and give your membership certificate to HR before your first payday.",
+      "If you are freelancing, apply for voluntary public insurance within 3 months of arriving if you had prior EU coverage.",
+      "Make sure your plan includes mandatory long-term nursing care (Pflegepflichtversicherung).",
+      "Do not cancel existing coverage until you have an official written confirmation from your new German insurer."
     ]
   },
   {
     "id": "kita-gutschein-application",
-    "title": "Kita-Gutschein Application (Daycare Legal Entitlement)",
-    "description": "Secure your municipal childcare voucher (Kita-Gutschein) and assert your statutory entitlement to a daycare spot for children aged 1 and above.",
+    "title": "Kita-Gutschein (Daycare Voucher for Berlin and Hamburg)",
+    "description": "Apply for your municipal childcare voucher so you can enroll your child in subsidized daycare.",
     "urgency": "recommended",
     "category": "Family & Social",
     "conditions": {
@@ -226,129 +228,129 @@
       "state": ["berlin", "hamburg"]
     },
     "legal_ref": "§ 24 Abs. 2 SGB VIII (Rechtsanspruch auf frühkindliche Förderung)",
-    "deadline": "6 to 9 months before required daycare start date",
-    "trap_warning": "German law guarantees every child from age 1 a legal right to a daycare spot (§ 24 SGB VIII), but physical spots are extremely scarce. Applying late means you will be waitlisted for over a year, forcing one parent out of work. If the Jugendamt fails to assign a spot, you have the legal right to sue the city or hire a private nanny (Tagesmutter) and force the city to reimburse costs under state administrative law.",
+    "deadline": "Apply 6 to 9 months before your planned start date.",
+    "trap_warning": "Children aged 1 and older have a statutory right to a childcare spot, but actual openings are limited. If you apply late, waitlists can take months. In cities with voucher systems, Kitas cannot accept your child without this official document.",
     "action_steps": [
-      "Apply for the official Kita-Gutschein via your city's youth portal (Jugendamt / Kita-Navigator) at least 6 months before needed",
-      "Collect proof of parental working hours from employers to qualify for full-day care (Ganztagsbetreuung / 8-9 hours)",
-      "Contact 15–20 local Kitas directly with your Gutschein application confirmation number",
-      "If no spot is allocated 2-3 months before work resumption, file an emergency administrative notice (Klage auf Kita-Platz Zuweisung) with the Jugendamt"
+      "Submit your voucher application through your city's portal (Jugendamt / Kita-Navigator) well ahead of time.",
+      "Provide proof of employment if you need full-day care (Ganztagsbetreuung).",
+      "Contact local daycares directly with your voucher application number.",
+      "If the youth welfare office does not offer a spot within reasonable travel distance, you can file a formal complaint or seek private childcare reimbursement."
     ]
   },
   {
     "id": "steuer-id-retrieval-class-vi",
-    "title": "Steuer-ID Retrieval & Tax Class VI Penalty Prevention",
-    "description": "Obtain your 11-digit Tax ID (Steuer-ID) from the Finanzamt immediately to prevent employer HR from withholding 45-50% under emergency Tax Class VI.",
+    "title": "Get Your Tax ID Early (Avoid Tax Class 6 Penalties)",
+    "description": "Get your 11-digit Tax ID (Steuer-ID) to HR before your first payroll run so they do not withhold emergency tax rates.",
     "urgency": "critical",
     "category": "Taxes & Employment",
     "conditions": {
       "employment": "employed"
     },
     "legal_ref": "§ 139b Abgabenordnung (AO) & § 39c Abs. 1 EStG",
-    "deadline": "Before the first monthly payroll accounting cutoff (usually 15th-20th of month 1)",
-    "trap_warning": "The Federal Central Tax Office (BZSt) automatically generates your Steuer-ID after Anmeldung, but postal letters take 2 to 6 weeks. If your company runs monthly payroll without your Steuer-ID in the ELStAM system, German tax law (§ 39c EStG) legally mandates them to place you into Tax Class VI (Steuerklasse VI). This withholds maximum emergency taxes—taking almost half your first salary. While you can claim it back on next year's tax return, you lose thousands in cash flow for months.",
+    "deadline": "Before your employer's first payroll cutoff (usually mid-month).",
+    "trap_warning": "The tax office mails your Steuer-ID after registration, but the letter often takes 2 to 6 weeks. If HR does not have your number when running payroll, tax law requires them to put you into Tax Class 6. This withholds roughly 45% to 50% of your first paycheck. You can get that money back later through a tax return, but it creates a major cash crunch upfront.",
     "action_steps": [
-      "Complete your Anmeldung as early as possible",
-      "If the BZSt letter does not arrive within 5 business days, walk in person into your municipal Finanzamt with your Meldebestätigung and passport",
-      "Request your Steuer-ID printout over the counter (Finanzamt officers can look it up immediately on their terminal)",
-      "Immediately email the 11-digit Steuer-ID and your birth date to your company payroll department"
+      "Complete your address registration as soon as you move in.",
+      "If your Steuer-ID letter has not arrived after a few days, visit your local Finanzamt in person with your passport and Meldebestätigung.",
+      "Ask the clerk for an immediate printout of your Steuer-ID at the counter.",
+      "Send the 11-digit number and your date of birth to payroll right away."
     ]
   },
   {
     "id": "schufa-free-art15-datenkopie",
-    "title": "Schufa Credit Record & Free GDPR Data Copy (Art. 15 DSGVO)",
-    "description": "Initialize and monitor your German credit score, dispute inaccurate records, and obtain your statutory free credit disclosure without paying commercial fees.",
+    "title": "Check Your Free Schufa Credit Report (Art. 15 GDPR)",
+    "description": "Get your free annual credit report under GDPR without paying 29.95 EUR for the commercial certificate.",
     "urgency": "recommended",
     "category": "Finance & Study",
     "conditions": {},
     "legal_ref": "Art. 15 DSGVO & § 34 Bundesdatenschutzgesetz (BDSG)",
-    "deadline": "Within first 60 days of opening bank accounts and signing utility/telecom contracts",
-    "trap_warning": "Landlords and utility providers routinely demand a 'Schufa-Auskunft'. Schufa aggressively pushes a €29.95 commercial package on their website, hiding the fact that under EU GDPR Article 15, you have a statutory right to order a completely free detailed copy ('Datenkopie nach Art. 15 DSGVO'). Furthermore, new expats have a 'blank' score—opening multiple bank accounts, overdrafts, or store financing contracts within your first months can tank your credit rating before you even apply for an apartment.",
+    "deadline": "Order within your first 60 days of opening bank accounts and phone contracts.",
+    "trap_warning": "Schufa markets a paid 29.95 EUR certificate on their homepage, but under Article 15 of the GDPR, you have the right to request a complete copy of your stored credit data for free ('Datenkopie nach Art. 15 DSGVO'). As a new resident with little credit history, applying for multiple credit cards or financing agreements early on can quickly drag your score down.",
     "action_steps": [
-      "Go to meineschufa.de and scroll down to 'Datenkopie nach Art. 15 DSGVO (kostenlos)'",
-      "Upload a copy of your passport and Meldebestätigung to verify identity",
-      "Inspect the postal report for incorrect address history, outdated bank accounts, or false negative entries",
-      "Avoid applying for multiple credit cards or consumer loans during your first 6 months in Germany"
+      "Go to meineschufa.de and scroll to find 'Datenkopie nach Art. 15 DSGVO (kostenlos)'.",
+      "Upload photos of your passport and Meldebestätigung to verify your identity.",
+      "Review the mailed report to verify that your address and accounts are listed accurately.",
+      "Avoid opening several bank accounts or loan applications in your first few months."
     ]
   },
   {
     "id": "elterngeld-parental-allowance",
-    "title": "Elterngeld Application (State Parental Allowance)",
-    "description": "Apply for state parental compensation (65% to 67% of pre-birth net income, up to €1,800/month) for 12 to 14 months following the birth of a child.",
+    "title": "Elterngeld (Parental Benefit Application)",
+    "description": "Apply for state parental allowance (65% to 67% of prior net earnings, up to 1,800 EUR per month) after your child is born.",
     "urgency": "recommended",
     "category": "Family & Social",
     "conditions": {
       "has_children": true
     },
-    "legal_ref": "§ 1 & § 5 Abs. 1 Bundeselterngeld- und Elternzeitgesetz (BEEG)",
-    "deadline": "Strictly within 3 months of the child's birth (Back-pay is legally limited to 3 months)",
-    "trap_warning": "Elterngeld back-payments are capped by federal law at strictly 3 months retroactive from the month the application is received. If you wait until month 4 or 5 because of bureaucratic overwhelm, you permanently forfeit €1,800 to €3,600+ with zero legal recourse. Additionally, certain residence permits (§ 16b student, temporary § 25 permits) do not qualify unless you have held an eligible work permit for a specified duration.",
+    "legal_ref": "§ 1 & § 5 Abs. 1 BEEG",
+    "deadline": "Submit within 3 months of birth. Retroactive payments are strictly limited to 3 months.",
+    "trap_warning": "Elterngeld only pays up to 3 months in arrears. If you submit your application when your baby is 5 months old, you permanently lose the first 2 months of payments. Some temporary residence permits also do not qualify unless specific work requirements are met.",
     "action_steps": [
-      "Request the official birth certificate designated specifically for Elterngeld ('Geburtsurkunde für Elterngeld') from the Standesamt",
-      "Collect net earnings statements (Entgeltbescheinigungen) for the 12 months immediately preceding the birth month",
-      "Submit the completed state Elterngeld form (online via ElterngeldDigital or paper to the local Elterngeldstelle)",
-      "Coordinate parental leave months (Basiselterngeld vs ElterngeldPlus) between both parents to maximize combined allowances"
+      "Get the official birth certificate marked 'für Elterngeld' from the Standesamt.",
+      "Gather your last 12 monthly pay slips before the birth.",
+      "Submit your application online or by post to your local Elterngeldstelle within 3 months.",
+      "Coordinate parental leave months (Basiselterngeld vs ElterngeldPlus) between both parents."
     ]
   },
   {
     "id": "kirchensteuer-declaration-optout",
-    "title": "Church Tax (Kirchensteuer): Catholic & Protestant Payroll Trap",
-    "description": "Prevent or stop automatic 8% (Bayern & Baden-Württemberg) or 9% (other states) church tax deductions levied if you are registered as Roman Catholic or Evangelical Protestant.",
+    "title": "Church Tax (Kirchensteuer): Avoid the Automatic Deduction",
+    "description": "Make sure your registration does not list you as Catholic or Protestant if you do not wish to pay the 8% or 9% church tax.",
     "urgency": "recommended",
     "category": "Taxes & Employment",
     "conditions": {
       "employment": "employed"
     },
     "legal_ref": "Art. 140 GG i.V.m. Art. 137 WRV & Landeskirchensteuergesetze",
-    "deadline": "During Anmeldung registration, or immediately upon first paycheck review",
-    "trap_warning": "German church tax is NOT an optional donation or statistical box—it is an enforceable state tax collected directly by the Finanzamt for the Roman Catholic (rk) and Evangelical Protestant (ev) churches. Expats baptized abroad who casually answer 'Catholic' or 'Christian' at the Bürgeramt find 8% to 9% of their income tax automatically withheld every month (costing €500–€3,000+ per year). Orthodox Christians, Muslims, and other denominations pay 0%, but the state will not refund mistakenly collected Catholic/Protestant tax retroactively without an official civil exit (Kirchenaustritt).",
+    "deadline": "During your address registration, or as soon as you see KiSt on your payslip.",
+    "trap_warning": "Church tax is collected directly through payroll by the state for the Roman Catholic and Evangelical Protestant churches. It costs an extra 8% of your income tax in Bavaria and Baden-Württemberg, or 9% in other states. If you mention foreign baptism at the Bürgeramt, they will register you and deduct this monthly. You cannot undo this through HR: you have to book a formal appointment at the local court or registry office (Kirchenaustritt).",
     "action_steps": [
-      "On your Anmeldung form: Write 'keine Religion' or '-' if you do not want to be taxed for foreign childhood baptism",
-      "If already deducted (look for 'KiSt' on your monthly payslip): Book a formal 'Kirchenaustritt' appointment at the municipal Amtsgericht or Standesamt/Bürgeramt",
-      "Pay the one-time civil departure fee (€30–€50) and obtain your official departure certificate (Kirchenaustrittsbescheinigung)",
-      "Send a certified copy of the Kirchenaustrittsbescheinigung to your local Finanzamt and HR to update your digital ELStAM tax record to 0%"
+      "When filling out your registration form, write 'keine Religion' or '-' if you do not want to be enrolled in German church tax.",
+      "If you see 'KiSt' on your pay stub, schedule an appointment for 'Kirchenaustritt' at your local Amtsgericht or Standesamt.",
+      "Pay the one-time civil fee (usually 30 to 50 EUR) and get your official exit certificate (Kirchenaustrittsbescheinigung).",
+      "Give a copy of the certificate to your payroll department and tax office so they update your ELStAM record."
     ]
   },
   {
     "id": "wg-joint-liability-protection",
-    "title": "WG Joint Liability Defense (Gesamtschuldnerische Haftung)",
-    "description": "Protect yourself against joint financial liability for flatmates' unpaid rent, utility debts, or apartment damages in shared flats (WGs).",
+    "title": "Flatshare Contracts: Avoid Joint Liability (WG)",
+    "description": "Protect yourself from being held financially responsible for a flatmate's unpaid rent or apartment damage.",
     "urgency": "critical",
     "category": "Housing & Rent",
     "conditions": {
       "housing": "wg"
     },
     "legal_ref": "§ 421 BGB (Gesamtschuldner) & § 540 BGB (Gebrauchsüberlassung)",
-    "deadline": "Before signing any shared apartment contract",
-    "trap_warning": "If all flatmates sign a single rental agreement as joint main tenants (Hauptmieter), you are 'jointly and severally liable' (§ 421 BGB). If a roommate loses their job, stops paying rent, or abruptly leaves the country, the landlord has the full legal right to seize 100% of the rent, utility back-payments, and end-of-tenancy renovation damages directly from YOU. Furthermore, you cannot unilaterally terminate your portion of the lease without all other roommates and the landlord simultaneously agreeing in writing.",
+    "deadline": "Before signing any shared rental agreement.",
+    "trap_warning": "If everyone signs the lease together as joint main tenants (Hauptmieter), German law considers you all jointly liable (§ 421 BGB). If a flatmate moves out or stops paying rent, the landlord can legally demand the entire rent and repair costs from you. You also cannot leave the lease on your own unless all other tenants and the landlord agree in writing.",
     "action_steps": [
-      "Whenever possible, sign an individual sublease agreement (Untermietvertrag) for your specific room with the main tenant, rather than a joint tenancy",
-      "If joint tenancy is unavoidable, execute a written internal agreement (Innenverhältnisvertrag) with all flatmates specifying room rent shares, deposit ownership, and dispute procedures",
-      "Require departing flatmates to obtain written confirmation of release (Entlassungsvereinbarung) from the landlord",
-      "Maintain documented move-in condition reports (Übergabeprotokoll) for common areas and your private bedroom"
+      "Ask for an individual sublease (Untermietvertrag) for your room instead of signing a joint lease.",
+      "If you have to sign a joint lease, make a written agreement with your roommates detailing each person's share of rent and deposit.",
+      "When a roommate leaves, make sure the landlord signs a release agreement (Entlassungsvereinbarung).",
+      "Fill out a written handover protocol (Übergabeprotokoll) noting existing room damages when you move in."
     ]
   },
   {
     "id": "consumer-contract-monthly-cancellation",
-    "title": "Fair Consumer Contracts: Enforce 1-Month Termination Right",
-    "description": "Exercise your statutory right under federal consumer law to cancel auto-renewed subscriptions, internet, gym, and phone contracts on a monthly basis.",
+    "title": "Cancel Subscriptions Monthly After the Initial Term",
+    "description": "Under German consumer law, contracts signed after March 2022 cannot automatically lock you in for another full year.",
     "urgency": "optional",
     "category": "Legal & Insurance",
     "conditions": {},
     "legal_ref": "§ 309 Nr. 9 BGB & § 312k BGB (Gesetz für faire Verbraucherverträge)",
-    "deadline": "At end of initial minimum term (Usually 12 or 24 months)",
-    "trap_warning": "Companies (gym chains, internet providers, mobile carriers, energy utilities) frequently exploit expat unfamiliarity with German contract law by claiming contracts automatically locked in for another full 12 or 24-month cycle upon missing an initial notice window. Under the Fair Consumer Contracts Act, any consumer contract signed after March 1, 2022 that exceeds its initial term may ONLY renew indefinitely with a maximum cancellation notice of one month. Any clause mandating a multi-month or annual renewal is legally null and void.",
+    "deadline": "At the end of your initial contract period (usually 12 or 24 months).",
+    "trap_warning": "Gyms, phone providers, and internet companies sometimes tell customers they missed the cancellation deadline and must pay for another full 12 months. Under federal law (§ 309 Nr. 9 BGB), any consumer contract entered after March 1, 2022 can only renew on a month-to-month basis once the initial term ends.",
     "action_steps": [
-      "Check contract creation date: all contracts entered after March 1, 2022 are protected by § 309 Nr. 9 BGB",
-      "Use the mandatory statutory online cancellation button ('Verträge hier kündigen') required on all provider websites under § 312k BGB",
-      "If customer support claims you are locked in for another year, cite § 309 Nr. 9 BGB in writing and demand immediate confirmation of termination within 30 days",
-      "Revoke the SEPA direct debit mandate (SEPA-Lastschriftmandat) with your bank if unauthorized debits persist after your 1-month notice expiry"
+      "Check when your contract was signed: rules apply to contracts signed on or after March 1, 2022.",
+      "Use the mandatory cancellation button ('Verträge hier kündigen') on the company website.",
+      "If support claims you are locked in for a full year, cite § 309 Nr. 9 BGB in writing and request confirmation of cancellation within 1 month.",
+      "Contact your bank to stop unauthorized direct debits if charges continue after your notice period."
     ]
   },
   {
     "id": "bayerisches-familiengeld-transition",
-    "title": "Bayerisches Familiengeld: Grandfathering Claim (Pre-2025 Children)",
-    "description": "Claim €250/month per child (€300 for 3rd+) during their 2nd and 3rd year of life via ZBFS if your child was born before January 1, 2025.",
+    "title": "Bayerisches Familiengeld: Grandfathered Rules for Pre-2025 Children",
+    "description": "Parents in Bavaria with children born on or before December 31, 2024 can still receive 250 EUR per month during the child's second and third year.",
     "urgency": "recommended",
     "category": "Family & Social",
     "conditions": {
@@ -356,19 +358,19 @@
       "state": "bayern"
     },
     "legal_ref": "Bayerisches Familiengeldgesetz (BayFamG)",
-    "deadline": "Until child's 3rd birthday (Strict expiry upon reaching 36 months of age)",
-    "trap_warning": "Bavaria abolished the Familiengeld for children born from January 1, 2025 onwards, and canceled the planned €3,000 Kinderstartgeld. Many expats assume this means Familiengeld was scrapped for EVERYONE. This is false! If your child was born BEFORE Jan 1, 2025, you are legally grandfathered in and entitled to up to €6,000 (€250/mo for 24 months). If you do not apply at the ZBFS before your child turns 3, you forfeit thousands of euros permanently.",
+    "deadline": "Before your child turns 3 years old.",
+    "trap_warning": "Bavaria stopped Familiengeld for children born in 2025 or later. However, children born before January 1, 2025 are still grandfathered in for up to 6,000 EUR in total support. If your child qualifies, you must apply before their third birthday or you forfeit the remaining payments.",
     "action_steps": [
-      "Check child birth date: must be born on or before December 31, 2024",
-      "Log into the ZBFS portal (Zentrum Bayern Familie und Soziales) using your ELSTER or BayernID",
-      "Submit proof of main residence in Bavaria (Erweiterte Meldebescheinigung) and child's birth certificate",
-      "If you already received Elterngeld in Bavaria, verify if Familiengeld was activated automatically; if not, submit the formal BayFamG application immediately"
+      "Check your child's birth date: they must be born on or before December 31, 2024.",
+      "Log in to the ZBFS portal (Zentrum Bayern Familie und Soziales) using your BayernID or ELSTER account.",
+      "Upload your child's birth certificate and your Bavarian registration certificate (Meldebescheinigung).",
+      "If you already received Bavarian Elterngeld, check if your Familiengeld was approved automatically."
     ]
   },
   {
     "id": "bayern-kita-beitragszuschuss",
-    "title": "Bavarian Kita Subsidy: Enforce €100/Month Fee Reduction",
-    "description": "Ensure your Bavarian daycare provider deducts the statutory €100/month state contribution (Beitragszuschuss) from your monthly childcare invoices.",
+    "title": "Bavarian Daycare Subsidy: 100 EUR Monthly Fee Reduction",
+    "description": "Bavaria pays a statutory 100 EUR monthly subsidy directly toward kindergarten fees for children aged 3 and older.",
     "urgency": "recommended",
     "category": "Family & Social",
     "conditions": {
@@ -376,13 +378,13 @@
       "state": "bayern"
     },
     "legal_ref": "Art. 23 BayKiBiG (Bayerisches Kinderbildungs- und -betreuungsgesetz)",
-    "deadline": "From September 1 of the calendar year the child turns 3 until primary school entry",
-    "trap_warning": "Unlike Berlin and Hamburg where daycare is tuition-free via Kita-Gutscheine, Bavarian daycare costs €250 to €800+ per month. However, the Free State of Bavaria pays an unconditional €100/month subsidy for every child starting September 1st of the year they turn 3. Some private, international, or parent-initiative Kitas (Eltern-Kind-Initiativen) fail to apply the discount automatically to expat parents' invoices unless you remind them of their BayKiBiG funding obligations.",
+    "deadline": "Starts September 1 of the calendar year your child turns 3.",
+    "trap_warning": "Unlike Berlin or Hamburg, daycare in Bavaria is not tuition-free. Fees often range from 250 to 800 EUR per month. However, the state pays an automatic 100 EUR per month contribution once a child turns 3. Some private or parent-run daycares forget to apply this discount on monthly invoices unless reminded.",
     "action_steps": [
-      "Confirm child's age: subsidy begins September 1st of the year the child reaches age 3",
-      "Check monthly Kita fee invoice for explicit line item 'Staatlicher Beitragszuschuss -100,00 €'",
-      "If missing, provide facility management with written notice citing Art. 23 BayKiBiG",
-      "If your provider is not BayKiBiG-subsidized, claim up to €4,000/year (two-thirds of childcare costs) as special expenses (Sonderausgaben) on your annual income tax return"
+      "Check your child's age: the subsidy starts September 1 of the year your child turns 3.",
+      "Review your monthly bill for a line item showing 'Staatlicher Beitragszuschuss -100,00 EUR'.",
+      "If missing, notify your daycare administration and cite Art. 23 BayKiBiG.",
+      "Keep all childcare invoices to claim up to 4,000 EUR per year as special expenses on your income tax return."
     ]
   }
 ]

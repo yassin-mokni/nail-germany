@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nail Germany // Expat Bureaucratic Self-Defense Protocol",
+  title: "Nail Germany | German Bureaucracy Checklist",
   description:
-    "A brutalist, utilitarian client-side guide for expats navigating German bureaucracy without getting exploited by landlords, employers, or the state.",
-  authors: [{ name: "Nail Germany Protocol" }],
+    "A clear, practical guide for expats moving to and living in Germany. Stay on top of your Anmeldung, rental rights, health insurance, and taxes.",
+  authors: [{ name: "Nail Germany" }],
   keywords: [
     "Germany expat",
     "German bureaucracy",

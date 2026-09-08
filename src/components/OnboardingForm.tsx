@@ -70,20 +70,20 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
       <div className="border-4 border-black bg-white p-6 mb-8">
         <div className="font-mono text-xs font-bold text-gray-700 uppercase tracking-widest mb-1 flex items-center gap-2">
           <span className="w-2.5 h-2.5 bg-black" />
-          <span>EXPAT PROFILE QUESTIONNAIRE</span>
+          <span>SET UP YOUR PROFILE</span>
         </div>
         <h2 className="text-3xl md:text-4xl font-black uppercase text-black tracking-tight font-sans">
-          Configure Your Expat Profile
+          Customize Your Checklist
         </h2>
         <p className="mt-2 text-base font-medium text-black max-w-2xl leading-relaxed">
-          German administrative and civil law applies selectively based on nationality, employment type, tenancy, and federal state.
-          Answer 6 questions to filter strictly the laws, deadlines, and traps that apply to you.
+          German rules, taxes, and deadlines vary depending on your citizenship, job, housing, and federal state.
+          Answer these 6 quick questions so we only show the steps that actually apply to you.
         </p>
 
         {/* Quick Testing Presets */}
         <div className="mt-5 pt-4 border-t-2 border-black no-print">
           <div className="font-mono text-xs font-bold uppercase text-black mb-2">
-            [⚡ QUICK-LOAD PRESETS FOR AUDIT & TESTING]:
+            [QUICK TEST PROFILES]:
           </div>
           <div className="flex flex-wrap gap-2">
             <button
@@ -100,7 +100,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
               }
               className="font-mono text-xs font-bold px-3 py-1.5 border-2 border-black bg-yellow-400 hover:bg-black hover:text-white cursor-pointer"
             >
-              Preset A: Married Non-EU Worker in Bayern (Tests Familiengeld)
+              Married Non-EU Employee in Bavaria (with kids)
             </button>
             <button
               type="button"
@@ -116,7 +116,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
               }
               className="font-mono text-xs font-bold px-3 py-1.5 border-2 border-black bg-gray-200 hover:bg-black hover:text-white cursor-pointer"
             >
-              Preset B: Single Student in Berlin WG (Tests Sperrkonto)
+              Single Non-EU Student in Berlin WG
             </button>
             <button
               type="button"
@@ -132,7 +132,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
               }
               className="font-mono text-xs font-bold px-3 py-1.5 border-2 border-black bg-gray-200 hover:bg-black hover:text-white cursor-pointer"
             >
-              Preset C: EU Freelancer in NRW (Tests Steuernummer)
+              EU Freelancer in NRW
             </button>
           </div>
         </div>
@@ -145,17 +145,17 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         <div className="border-4 border-black bg-white p-5">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
-              SECTION 01 / 06 // NATIONALITY & IMMIGRATION STATUS
+              QUESTION 01 OF 06 // CITIZENSHIP
             </span>
             {origin ? (
-              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[RESOLVED]</span>
+              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
               <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">Where is your passport / citizenship from?</h3>
           <p className="text-sm text-gray-700 font-medium mb-4">
-            EU citizens enjoy unconditional freedom of movement (§ 2 FreizügG/EU). Non-EU citizens must satisfy strict residence permit & work authorization rules.
+            EU citizens have the right to live and work in Germany without a visa (§ 2 FreizügG/EU). Non-EU citizens need a valid residence permit and work authorization.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
@@ -169,7 +169,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">EU / EEA Citizen</div>
               <div className={`text-xs mt-1 font-mono ${origin === "eu" ? "text-gray-300" : "text-gray-600"}`}>
-                Unrestricted residence & labor access. No Ausländerbehörde visa required.
+                Unrestricted residence and work rights. No visa or immigration office appointment needed.
               </div>
             </button>
 
@@ -184,7 +184,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Non-EU Citizen (Third Country)</div>
               <div className={`text-xs mt-1 font-mono ${origin === "non-eu" ? "text-gray-300" : "text-gray-600"}`}>
-                Subject to AufenthG, visa conversions, Blue Card, and immigration checks.
+                Subject to residence permits, visa conversions, Blue Card rules, and immigration appointments.
               </div>
             </button>
           </div>
@@ -194,17 +194,17 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         <div className="border-4 border-black bg-white p-5">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
-              SECTION 02 / 06 // ECONOMIC ACTIVITY & EMPLOYMENT
+              QUESTION 02 OF 06 // EMPLOYMENT TYPE
             </span>
             {employment ? (
-              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[RESOLVED]</span>
+              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
               <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">What is your employment structure in Germany?</h3>
           <p className="text-sm text-gray-700 font-medium mb-4">
-            Dictates social security withholding, dismissal protection eligibility, and mandatory Finanzamt filings.
+            Determines how your taxes and social contributions are paid, and what registrations you need with the tax office.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button
@@ -218,7 +218,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Employed (Angestellt)</div>
               <div className={`text-xs mt-1 font-mono ${employment === "employed" ? "text-gray-300" : "text-gray-600"}`}>
-                Standard labor contract. Social contributions deducted automatically.
+                Standard employment contract. Health and pension contributions are deducted automatically.
               </div>
             </button>
 
@@ -233,7 +233,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Freelancer / Self-Employed</div>
               <div className={`text-xs mt-1 font-mono ${employment === "freelance" ? "text-gray-300" : "text-gray-600"}`}>
-                Direct invoice issuance. Requires ELSTER questionnaire & freelance Steuernummer.
+                Direct invoice billing. Requires an ELSTER tax registration and freelance tax number.
               </div>
             </button>
 
@@ -248,7 +248,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">University Student</div>
               <div className={`text-xs mt-1 font-mono ${employment === "student" ? "text-gray-300" : "text-gray-600"}`}>
-                Subject to 140 full-day work caps, blocked account payouts, student health rates.
+                Subject to work limits (140 full days/year), blocked accounts, and student health rates.
               </div>
             </button>
           </div>
@@ -258,17 +258,17 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         <div className="border-4 border-black bg-white p-5">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
-              SECTION 03 / 06 // RESIDENTIAL TENANCY TYPE
+              QUESTION 03 OF 06 // HOUSING TYPE
             </span>
             {housing ? (
-              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[RESOLVED]</span>
+              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
               <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">What is your housing arrangement?</h3>
           <p className="text-sm text-gray-700 font-medium mb-4">
-            Critical for German tenancy law (BGB), Mietkaution escrow protection, and Rundfunkbeitrag liability.
+            Determines your rental deposit rights and how you handle the monthly TV and radio fee (Rundfunkbeitrag).
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
@@ -282,7 +282,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Own Apartment (Hauptmieter)</div>
               <div className={`text-xs mt-1 font-mono ${housing === "own_apartment" ? "text-gray-300" : "text-gray-600"}`}>
-                Sole or main tenant with direct landlord lease. Responsible for full radio fee.
+                Direct lease with landlord. Responsible for the full 18.36 EUR/month TV and radio fee.
               </div>
             </button>
 
@@ -297,7 +297,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">WG / Flatshare (Untermieter)</div>
               <div className={`text-xs mt-1 font-mono ${housing === "wg" ? "text-gray-300" : "text-gray-600"}`}>
-                Roommate in shared flat. Must coordinate radio fee with flatmates to avoid double billing.
+                Room in a shared flat. Coordinate the radio fee with flatmates to avoid being billed twice.
               </div>
             </button>
           </div>
@@ -307,17 +307,17 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         <div className="border-4 border-black bg-white p-5">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
-              SECTION 04 / 06 // CIVIL & MARITAL STATUS
+              QUESTION 04 OF 06 // MARITAL STATUS
             </span>
             {maritalStatus ? (
-              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[RESOLVED]</span>
+              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
               <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">What is your legal marital status?</h3>
           <p className="text-sm text-gray-700 font-medium mb-4">
-            Married expats can switch income tax brackets (Steuerklassen III/V vs IV/IV) to optimize monthly take-home pay.
+            Married couples can adjust tax classes (such as III and V) to optimize monthly take-home pay.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
@@ -331,7 +331,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Single / Unmarried</div>
               <div className={`text-xs mt-1 font-mono ${maritalStatus === "single" ? "text-gray-300" : "text-gray-600"}`}>
-                Assigned Tax Class I automatically. Individual income assessment.
+                Assigned Tax Class 1 automatically.
               </div>
             </button>
 
@@ -346,7 +346,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Married / Civil Partnership</div>
               <div className={`text-xs mt-1 font-mono ${maritalStatus === "married" ? "text-gray-300" : "text-gray-600"}`}>
-                Eligible for joint tax assessment and child support benefit protocols.
+                Eligible for joint tax assessment and tax class optimization.
               </div>
             </button>
           </div>
@@ -356,17 +356,17 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         <div className="border-4 border-black bg-white p-5">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
-              SECTION 05 / 06 // DEPENDENT CHILDREN
+              QUESTION 05 OF 06 // CHILDREN
             </span>
             {hasChildren !== null ? (
-              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[RESOLVED]</span>
+              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
               <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">Do you have dependent children?</h3>
           <p className="text-sm text-gray-700 font-medium mb-4">
-            Unlocks state child benefit claims (€250/child/month Kindergeld) and Kita nursery voucher rights.
+            Determines whether you should apply for state child benefits (Kindergeld, 250 EUR per month per child) and daycare support.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
@@ -380,7 +380,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">Yes, I Have Children</div>
               <div className={`text-xs mt-1 font-mono ${hasChildren === true ? "text-gray-300" : "text-gray-600"}`}>
-                Triggers state Kindergeld application and child healthcare registration duties.
+                Shows child benefit applications (Kindergeld, Elterngeld) and childcare support.
               </div>
             </button>
 
@@ -395,7 +395,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             >
               <div className="font-black text-lg">No Children</div>
               <div className={`text-xs mt-1 font-mono ${hasChildren === false ? "text-gray-300" : "text-gray-600"}`}>
-                No child-related obligations or benefit applications required.
+                Hides all child-related applications.
               </div>
             </button>
           </div>
@@ -405,17 +405,17 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         <div className="border-4 border-black bg-white p-5">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
-              SECTION 06 / 06 // FEDERAL STATE & JURISDICTION
+              QUESTION 06 OF 06 // FEDERAL STATE (BUNDESLAND)
             </span>
             {state ? (
-              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[RESOLVED]</span>
+              <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
               <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">In which German federal state (Bundesland) do you reside?</h3>
           <p className="text-sm text-gray-700 font-medium mb-4">
-            Dictates church tax percentages (8% in Bayern & Baden-Württemberg vs 9% elsewhere), childcare voucher systems (Kita-Gutschein in Berlin/Hamburg vs direct subsidies in Bayern), and state-level family grants.
+            Church tax rates (8% in Bavaria and Baden-Württemberg vs 9% elsewhere) and daycare voucher rules differ by state.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
@@ -460,12 +460,12 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
                   </span>
                 ) : (
                   <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">
-                    {[origin, employment, housing, maritalStatus, hasChildren !== null, state].filter(Boolean).length} / 6 RESOLVED
+                    {[origin, employment, housing, maritalStatus, hasChildren !== null, state].filter(Boolean).length} / 6 ANSWERED
                   </span>
                 )}
               </div>
               <h3 className="text-lg font-black uppercase text-black font-sans">
-                Configuration
+                Progress
               </h3>
             </div>
 

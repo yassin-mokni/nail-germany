@@ -56,7 +56,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
             className={`w-8 h-8 shrink-0 border-2 border-black flex items-center justify-center cursor-pointer select-none font-mono text-base font-black transition-none focus:outline-none focus:ring-2 focus:ring-black ${
               isCompleted ? "bg-black text-white" : "bg-white text-transparent hover:bg-gray-200"
             }`}
-            title={isCompleted ? "Mark as pending" : "Mark as completed/secured"}
+            title={isCompleted ? "Mark as pending" : "Mark as completed"}
           >
             {isCompleted ? "✓" : ""}
           </button>
@@ -96,7 +96,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
                   <span className="bg-amber-400 text-black px-1.5 py-0.5 text-[10px] font-black">
                     ! TRAP
                   </span>
-                  <span>HOW THEY SCREW YOU (THE BUREAUCRACY TRAP)</span>
+                  <span>WHAT TO WATCH OUT FOR (COMMON TRAP)</span>
                 </div>
                 <p className="p-3 text-sm font-medium leading-relaxed text-black">
                   {task.trap_warning}
