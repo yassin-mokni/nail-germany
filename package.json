@@ -1,9 +1,28 @@
 {
   "name": "nail-germany",
   "version": "0.1.0",
-  "private": true,
+  "description": "A clear, honest, and free guide to moving to and living in Germany. Master German bureaucracy, know your rights, and avoid costly traps.",
+  "license": "MIT",
+  "author": "Yassin <https://mokni.dev>",
+  "homepage": "https://nail-germany.mokni.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yassin-mokni/nail-germany.git"
+  },
+  "keywords": [
+    "germany",
+    "expat",
+    "bureaucracy",
+    "anmeldung",
+    "relocation",
+    "checklist",
+    "taxes",
+    "open-source"
+  ],
+  "private": false,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-llms.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

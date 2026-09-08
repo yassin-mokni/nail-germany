@@ -20,7 +20,16 @@ export const Footer: React.FC = () => {
           </p>
         </div>
         <div className="text-left md:text-right text-[11px] space-y-1 text-gray-700 shrink-0 font-mono">
-          <div className="text-black font-semibold flex items-center md:justify-end gap-1.5">
+          <div className="text-black font-semibold flex items-center md:justify-end gap-2">
+            <a
+              href="https://github.com/yassin-mokni/nail-germany"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-black hover:underline cursor-pointer font-mono text-[11px]"
+            >
+              [GitHub]
+            </a>
+            <span className="text-gray-400">•</span>
             <span>Built by</span>
             <a
               href="https://mokni.dev"
@@ -31,7 +40,7 @@ export const Footer: React.FC = () => {
               Yassin
             </a>
           </div>
-          <div className="text-black font-bold">100% PRIVATE & LOCAL</div>
+          <div className="text-black font-bold">OPEN SOURCE • 100% PRIVATE</div>
           <div className="text-gray-500 text-[10px]">Data stays in your browser • Updated for 2026</div>
         </div>
       </div>

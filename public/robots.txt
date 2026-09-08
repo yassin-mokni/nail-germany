@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://nail-germany.mokni.dev/sitemap.xml
+
+# LLM & AI Agents
+# https://nail-germany.mokni.dev/llms.txt
+# https://nail-germany.mokni.dev/llms-full.txt
+# https://nail-germany.mokni.dev/tasks.json

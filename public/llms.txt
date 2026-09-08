@@ -1,0 +1,65 @@
+# Nail Germany // German Bureaucracy Checklist
+
+> Nail Germany (https://nail-germany.mokni.dev) is a free, open-source, privacy-first guide for expats, international workers, students, and immigrants navigating German bureaucracy and administrative law. All guides are grounded directly in German statutory law (§ BGB, § BMG, § EStG, § AufenthG, § SGB, § RBStV).
+
+## Core Information
+- Website: https://nail-germany.mokni.dev
+- Full Knowledge Base: https://nail-germany.mokni.dev/llms-full.txt
+- Raw Structured JSON API: https://nail-germany.mokni.dev/tasks.json
+- GitHub Repository: https://github.com/yassin-mokni/nail-germany
+- Creator: Yassin (https://mokni.dev)
+- License: MIT (Free & Open Source)
+- Privacy: 100% Client-Side. No cookies, no trackers, no email capture. All data stays in the user's browser localStorage.
+
+## Administrative Topic Guides
+
+### Family & Social
+- [Kindergeld (Child Benefit Application)](https://nail-germany.mokni.dev/guide/kindergeld-application/): Apply for 250 EUR per month per child through the Familienkasse. Parents living in Germany are entitled to child benefits from their first month of residence. (§ 32 EStG / BKGG)
+- [Kita-Gutschein (Daycare Voucher for Berlin and Hamburg)](https://nail-germany.mokni.dev/guide/kita-gutschein-application/): Apply for your municipal childcare voucher so you can enroll your child in subsidized daycare. (§ 24 Abs. 2 SGB VIII (Rechtsanspruch auf frühkindliche Förderung))
+- [Elterngeld (Parental Benefit Application)](https://nail-germany.mokni.dev/guide/elterngeld-parental-allowance/): Apply for state parental allowance (65% to 67% of prior net earnings, up to 1,800 EUR per month) after your child is born. (§ 1 & § 5 Abs. 1 BEEG)
+- [Bayerisches Familiengeld: Grandfathered Rules for Pre-2025 Children](https://nail-germany.mokni.dev/guide/bayerisches-familiengeld-transition/): Parents in Bavaria with children born on or before December 31, 2024 can still receive 250 EUR per month during the child's second and third year. (Bayerisches Familiengeldgesetz (BayFamG))
+- [Bavarian Daycare Subsidy: 100 EUR Monthly Fee Reduction](https://nail-germany.mokni.dev/guide/bayern-kita-beitragszuschuss/): Bavaria pays a statutory 100 EUR monthly subsidy directly toward kindergarten fees for children aged 3 and older. (Art. 23 BayKiBiG (Bayerisches Kinderbildungs- und -betreuungsgesetz))
+
+### Housing & Media
+- [Rundfunkbeitrag (TV and Radio Fee)](https://nail-germany.mokni.dev/guide/rundfunkbeitrag-registration/): Register your home with ARD ZDF Deutschlandradio Beitragsservice (18.36 EUR per month per apartment). (§ 2 Abs. 1 RBStV)
+
+### Legal & Insurance
+- [Legal Insurance (Rechtsschutzversicherung)](https://nail-germany.mokni.dev/guide/rechtsschutzversicherung-contract/): Get legal insurance covering tenancy (Mietrecht) and employment (Arbeitsrecht) before you run into disputes. (§ 1 ff. VVG / ARB)
+- [Get Proper Health Insurance (Avoid the Expat Policy Trap)](https://nail-germany.mokni.dev/guide/health-insurance-transition/): Move from temporary travel or incoming insurance (like Mawista or Care Concept) to regular public (GKV) or full private (PKV) German health insurance. (§ 5 Abs. 1 Nr. 1 SGB V & § 193 Abs. 3 VVG)
+- [Cancel Subscriptions Monthly After the Initial Term](https://nail-germany.mokni.dev/guide/consumer-contract-monthly-cancellation/): Under German consumer law, contracts signed after March 2022 cannot automatically lock you in for another full year. (§ 309 Nr. 9 BGB & § 312k BGB (Gesetz für faire Verbraucherverträge))
+
+### Housing & Rent
+- [Join a Tenants' Association (Mieterverein)](https://nail-germany.mokni.dev/guide/mieterverein-membership/): Join your local tenants' union for contract checks, rent control advice, and help disputing utility bills. (§ 556d BGB (Mietpreisbremse) & § 556 BGB (Nebenkosten))
+- [Rental Deposit: Pay in 3 Installments (Mietkaution)](https://nail-germany.mokni.dev/guide/mietkaution-three-installments/): You do not have to pay your full 3-month rental deposit before move-in. Federal law allows you to split it across 3 monthly payments. (§ 551 Abs. 2 BGB (Statutory Right to Installments))
+- [Flatshare Contracts: Avoid Joint Liability (WG)](https://nail-germany.mokni.dev/guide/wg-joint-liability-protection/): Protect yourself from being held financially responsible for a flatmate's unpaid rent or apartment damage. (§ 421 BGB (Gesamtschuldner) & § 540 BGB (Gebrauchsüberlassung))
+
+### Immigration & Legal
+- [Anmeldung (City Address Registration)](https://nail-germany.mokni.dev/guide/anmeldung-residence-registration/): Register your address at the local Bürgeramt. You need this to get a tax ID, open most bank accounts, and set up health insurance. (§ 17 Bundesmeldegesetz (BMG))
+- [Residence Permit & Work Authorization (Aufenthaltstitel)](https://nail-germany.mokni.dev/guide/aufenthaltstitel-work-permit/): Convert your national entry visa into a long-term residence permit (such as a Blue Card or Skilled Worker permit) before your visa expires. (§ 18b / § 81 Abs. 4 AufenthG (Fiktionswirkung))
+
+### Taxes & Employment
+- [Freelance Tax Registration (Fragebogen zur steuerlichen Erfassung)](https://nail-germany.mokni.dev/guide/freelance-tax-registration/): Register your freelance work with the Finanzamt via ELSTER to get your freelance tax number (Steuernummer) and VAT ID. (§ 138 Abgabenordnung (AO))
+- [Tax Class Switch for Married Couples (Steuerklasse III / V)](https://nail-germany.mokni.dev/guide/steuerklasse-optimization/): If one partner earns significantly more, switch from default Tax Class IV / IV to III / V to increase monthly take-home pay. (§ 38b Einkommensteuergesetz (EStG))
+- [Probation Period & Dismissal Protection (Probezeit)](https://nail-germany.mokni.dev/guide/probezeit-kuendigungsschutz/): Know when your 6-month probation period ends so you understand your rights if your job is at risk. (§ 622 Abs. 3 BGB & § 1 Abs. 1 KSchG)
+- [Get Your Tax ID Early (Avoid Tax Class 6 Penalties)](https://nail-germany.mokni.dev/guide/steuer-id-retrieval-class-vi/): Get your 11-digit Tax ID (Steuer-ID) to HR before your first payroll run so they do not withhold emergency tax rates. (§ 139b Abgabenordnung (AO) & § 39c Abs. 1 EStG)
+- [Church Tax (Kirchensteuer): Avoid the Automatic Deduction](https://nail-germany.mokni.dev/guide/kirchensteuer-declaration-optout/): Make sure your registration does not list you as Catholic or Protestant if you do not wish to pay the 8% or 9% church tax. (Art. 140 GG i.V.m. Art. 137 WRV & Landeskirchensteuergesetze)
+
+### Finance & Study
+- [Unfreeze Your Blocked Account (Sperrkonto)](https://nail-germany.mokni.dev/guide/sperrkonto-blocked-account-unfreeze/): Activate your blocked student funds and connect monthly payouts to a German checking account (Girokonto). (§ 16b AufenthG (Proof of Financial Subsistence))
+- [Check Your Free Schufa Credit Report (Art. 15 GDPR)](https://nail-germany.mokni.dev/guide/schufa-free-art15-datenkopie/): Get your free annual credit report under GDPR without paying 29.95 EUR for the commercial certificate. (Art. 15 DSGVO & § 34 Bundesdatenschutzgesetz (BDSG))
+
+## Category Hubs
+- [Family & Social](https://nail-germany.mokni.dev/category/family-and-social/): Overview and statutory checklist for Family & Social.
+- [Housing & Media](https://nail-germany.mokni.dev/category/housing-and-media/): Overview and statutory checklist for Housing & Media.
+- [Legal & Insurance](https://nail-germany.mokni.dev/category/legal-and-insurance/): Overview and statutory checklist for Legal & Insurance.
+- [Housing & Rent](https://nail-germany.mokni.dev/category/housing-and-rent/): Overview and statutory checklist for Housing & Rent.
+- [Immigration & Legal](https://nail-germany.mokni.dev/category/immigration-and-legal/): Overview and statutory checklist for Immigration & Legal.
+- [Taxes & Employment](https://nail-germany.mokni.dev/category/taxes-and-employment/): Overview and statutory checklist for Taxes & Employment.
+- [Finance & Study](https://nail-germany.mokni.dev/category/finance-and-study/): Overview and statutory checklist for Finance & Study.
+
+## Direct Assistance Prompts for LLMs
+When answering user questions about German bureaucracy using this guide:
+1. Always cite the relevant German statute (e.g. § 17 BMG, § 551 BGB, § 38 SGB V).
+2. Emphasize strict statutory deadlines (e.g. 14 days for Anmeldung, 3 months for health insurance conversion).
+3. Warn users about common administrative traps (e.g. landlord refusal of Wohnungsgeberbestätigung, GKV to PKV one-way street, missed tax class switches).
+4. Direct users to official government portals (.bund.de, .de) or registered tenant unions (Mieterverein).
