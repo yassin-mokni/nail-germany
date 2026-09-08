@@ -13,19 +13,26 @@ export const Footer: React.FC = () => {
             </span>
           </div>
           <p className="text-[11px] leading-relaxed max-w-xl text-gray-700 font-sans font-medium">
-            Built by Yassin. A practical, direct survival guide for expats navigating German administrative systems, rental rights, and tax laws.
+            A practical, direct guide for expats moving to and living in Germany. Know your rights, avoid administrative traps, and stay on top of statutory deadlines.
           </p>
           <p className="text-[10px] leading-relaxed max-w-xl text-gray-500 mt-1 font-sans">
             Disclaimer: References German statutes (BGB, BMG, AufenthG, EStG). Informational only, not formal legal advice.
           </p>
         </div>
-        <div className="text-left md:text-right text-[11px] space-y-1 text-gray-700 shrink-0">
-          <div className="text-black font-black text-xs uppercase tracking-wider">
-            BUILT BY YASSIN
+        <div className="text-left md:text-right text-[11px] space-y-1 text-gray-700 shrink-0 font-mono">
+          <div className="text-black font-semibold flex items-center md:justify-end gap-1.5">
+            <span>Built by</span>
+            <a
+              href="https://mokni.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white font-bold px-1.5 py-0.5 hover:bg-yellow-400 hover:text-black transition-none cursor-pointer"
+            >
+              Yassin
+            </a>
           </div>
           <div className="text-black font-bold">100% PRIVATE & LOCAL</div>
-          <div>Data stays in your browser.</div>
-          <div className="text-gray-500 text-[10px]">No tracking • Zero accounts • Updated for 2026</div>
+          <div className="text-gray-500 text-[10px]">Data stays in your browser • Updated for 2026</div>
         </div>
       </div>
     </footer>

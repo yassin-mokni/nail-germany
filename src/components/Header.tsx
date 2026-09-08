@@ -21,9 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
             NAIL GERMANY // RELOCATION & BUREAUCRACY GUIDE
           </span>
         </div>
-        <div className="flex items-center gap-3 text-gray-400 text-[10px] sm:text-[11px]">
-          <span className="text-white font-bold tracking-wide">BUILT BY YASSIN</span>
-          <span>•</span>
+        <div className="text-gray-400 text-[10px] sm:text-[11px]">
           <span>UPDATED FOR 2026</span>
         </div>
       </div>
@@ -31,10 +29,8 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
       {/* Main Header Content */}
       <div className="max-w-6xl mx-auto px-4 py-5 sm:py-6 flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6">
         <div>
-          <div className="inline-flex items-center gap-2 bg-black text-white font-mono text-[10px] sm:text-xs px-2 py-0.5 font-bold uppercase mb-2">
-            <span>Practical Expat Checklist</span>
-            <span className="text-gray-400">{"//"}</span>
-            <span className="text-yellow-400">Built by Yassin</span>
+          <div className="inline-block bg-black text-white font-mono text-[10px] sm:text-xs px-2 py-0.5 font-bold uppercase mb-2">
+            Practical Expat Checklist
           </div>
           <div className="flex items-center gap-3">
             <LogoIcon size={40} className="sm:w-11 sm:h-11" />

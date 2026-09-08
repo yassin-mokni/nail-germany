@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Nail Germany | German Bureaucracy Checklist",
   description:
     "A clear, practical guide for expats moving to and living in Germany. Stay on top of your Anmeldung, rental rights, health insurance, and taxes. Built by Yassin.",
-  authors: [{ name: "Yassin" }],
+  authors: [{ name: "Yassin", url: "https://mokni.dev" }],
   creator: "Yassin",
   keywords: [
     "Germany expat",
