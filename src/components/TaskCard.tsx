@@ -62,30 +62,34 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
           </button>
 
           <div className="flex-1 min-w-0">
-            <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
+            <div className="flex items-start justify-between gap-3">
               <h3
                 onClick={() => toggleCompletedTask(task.id)}
-                className={`text-xl md:text-2xl font-black cursor-pointer tracking-tight ${
+                className={`text-xl md:text-2xl font-black cursor-pointer tracking-tight leading-snug flex-1 ${
                   isCompleted ? "line-through text-gray-500" : "text-black"
                 }`}
               >
                 {task.title}
               </h3>
 
-              {isCompleted ? (
-                <span className="font-mono text-xs font-bold px-2 py-0.5 bg-black text-white self-start">
+              {isCompleted && (
+                <span className="font-mono text-xs font-bold px-2 py-0.5 bg-black text-white shrink-0">
                   [✓ COMPLETED]
                 </span>
-              ) : (
-                task.deadline && (
-                  <span className="font-mono text-xs font-bold text-red-700 bg-red-50 border border-red-300 px-2 py-0.5 self-start">
-                    ⏱ {task.deadline}
-                  </span>
-                )
               )}
             </div>
 
-            <p className={`mt-2 text-base leading-relaxed ${isCompleted ? "text-gray-600" : "text-black font-medium"}`}>
+            {/* Dedicated Deadline Row */}
+            {!isCompleted && task.deadline && (
+              <div className="mt-2.5">
+                <span className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-red-800 bg-red-50 border border-red-300 px-2.5 py-1">
+                  <span>⏱ DEADLINE:</span>
+                  <span className="font-medium text-gray-900">{task.deadline}</span>
+                </span>
+              </div>
+            )}
+
+            <p className={`mt-3 text-base leading-relaxed ${isCompleted ? "text-gray-600" : "text-black font-medium"}`}>
               {task.description}
             </p>
 
