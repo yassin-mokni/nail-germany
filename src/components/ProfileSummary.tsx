@@ -13,6 +13,7 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ onEdit }) => {
   const housing = useProfileStore((s) => s.housing);
   const marital_status = useProfileStore((s) => s.marital_status);
   const has_children = useProfileStore((s) => s.has_children);
+  const state = useProfileStore((s) => s.state);
 
   const formatOrigin = (v: string | null) => (v === "eu" ? "EU / EEA CITIZEN" : "NON-EU CITIZEN");
   const formatEmployment = (v: string | null) => {
@@ -28,6 +29,19 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ onEdit }) => {
   };
   const formatMarital = (v: string | null) => (v === "married" ? "MARRIED / CIVIL UNION" : "SINGLE");
   const formatChildren = (v: boolean | null) => (v ? "WITH CHILDREN" : "NO CHILDREN");
+  const formatState = (v: string | null) => {
+    switch (v) {
+      case "bayern": return "BAYERN (BAVARIA)";
+      case "berlin": return "BERLIN";
+      case "nordrhein-westfalen": return "NRW";
+      case "baden-wuerttemberg": return "BADEN-WÜRTTEMBERG";
+      case "hessen": return "HESSEN";
+      case "hamburg": return "HAMBURG";
+      case "sachsen": return "SACHSEN";
+      case "niedersachsen": return "NIEDERSACHSEN";
+      default: return v ? v.toUpperCase() : "NOT SET";
+    }
+  };
 
   return (
     <div className="border-4 border-black bg-white p-4 md:p-5 mb-6">
@@ -46,7 +60,7 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ onEdit }) => {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 font-mono text-xs">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 font-mono text-xs">
         <div className="border-2 border-black p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">1. ORIGIN</span>
           <span className="font-bold text-black text-sm block mt-0.5">{formatOrigin(origin)}</span>
@@ -70,6 +84,11 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ onEdit }) => {
         <div className="border-2 border-black p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">5. DEPENDENTS</span>
           <span className="font-bold text-black text-sm block mt-0.5">{formatChildren(has_children)}</span>
+        </div>
+
+        <div className="border-2 border-black p-2.5 bg-gray-50">
+          <span className="text-[10px] text-gray-700 block uppercase font-bold">6. JURISDICTION</span>
+          <span className="font-bold text-black text-sm block mt-0.5">{formatState(state)}</span>
         </div>
       </div>
     </div>

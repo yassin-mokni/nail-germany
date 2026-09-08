@@ -8,6 +8,7 @@ const initialProfile: UserProfile = {
   housing: null,
   marital_status: null,
   has_children: null,
+  state: null,
   completed_tasks: [],
   is_configured: false,
 };
@@ -21,13 +22,14 @@ export const useProfileStore = create<ProfileStore>()(
       setProfile: (profile: Partial<UserProfile>) => {
         set((state) => {
           const updated = { ...state, ...profile };
-          // If all 5 core fields are filled, mark as configured
+          // If all 6 core fields are filled, mark as configured
           const isComplete =
             updated.origin !== null &&
             updated.employment !== null &&
             updated.housing !== null &&
             updated.marital_status !== null &&
-            updated.has_children !== null;
+            updated.has_children !== null &&
+            updated.state !== null;
 
           return {
             ...profile,
@@ -44,7 +46,8 @@ export const useProfileStore = create<ProfileStore>()(
             nextState.employment !== null &&
             nextState.housing !== null &&
             nextState.marital_status !== null &&
-            nextState.has_children !== null;
+            nextState.has_children !== null &&
+            nextState.state !== null;
 
           return {
             [field]: value,

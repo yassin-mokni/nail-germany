@@ -61,6 +61,13 @@ export function matchesProfile(task: TaskItem, profile: UserProfile): boolean {
     }
   }
 
+  // Check state / Bundesland
+  if (conditions.state !== undefined) {
+    if (!checkConditionMatch(profile.state, conditions.state)) {
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -70,6 +77,7 @@ export function useFilteredTasks() {
   const housing = useProfileStore((s) => s.housing);
   const marital_status = useProfileStore((s) => s.marital_status);
   const has_children = useProfileStore((s) => s.has_children);
+  const state = useProfileStore((s) => s.state);
   const completed_tasks = useProfileStore((s) => s.completed_tasks);
   const is_configured = useProfileStore((s) => s.is_configured);
 
@@ -80,10 +88,11 @@ export function useFilteredTasks() {
       housing,
       marital_status,
       has_children,
+      state,
       completed_tasks,
       is_configured,
     }),
-    [origin, employment, housing, marital_status, has_children, completed_tasks, is_configured]
+    [origin, employment, housing, marital_status, has_children, state, completed_tasks, is_configured]
   );
 
   const filteredTasks = useMemo(() => {

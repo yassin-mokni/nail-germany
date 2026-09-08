@@ -79,11 +79,12 @@
     "conditions": {},
     "legal_ref": "§ 17 Bundesmeldegesetz (BMG)",
     "deadline": "Strict 14 calendar days from the move-in date on your certificate",
-    "trap_warning": "Without an official Meldebestätigung, you cannot open a compliant bank account, obtain a Tax Identification Number (Steuer-ID), or receive public health insurance cards. Rogue subletters who refuse to issue a Wohnungsgeberbestätigung are subletting illegally—you will be stranded with zero legal address and risk up to €1,000 in municipal administrative fines.",
+    "trap_warning": "Without an official Meldebestätigung, you cannot open a compliant bank account, obtain a Tax Identification Number (Steuer-ID), or receive public health insurance cards. Rogue subletters who refuse to issue a Wohnungsgeberbestätigung are subletting illegally—you will be stranded with zero legal address and risk up to €1,000 in municipal administrative fines. Furthermore, casually declaring childhood baptism on the registration form triggers automatic 8%–9% payroll church tax deductions.",
     "action_steps": [
       "Obtain the signed 'Wohnungsgeberbestätigung' (Landlord Confirmation) directly from the landlord/sublessor",
       "Book an appointment (Bürgeramt Termin) immediately upon signing",
       "Bring your passport, rental lease, and signed Wohnungsgeberbestätigung",
+      "On the registration form, check the 'Religionsgesellschaft' field: write 'keine Religion' (or '-') unless you actively intend to pay 8%–9% of your income tax to the Catholic or Protestant church",
       "Safely archive the paper 'Meldebestätigung'—do not lose it"
     ]
   },
@@ -221,7 +222,8 @@
     "urgency": "recommended",
     "category": "Family & Social",
     "conditions": {
-      "has_children": true
+      "has_children": true,
+      "state": ["berlin", "hamburg"]
     },
     "legal_ref": "§ 24 Abs. 2 SGB VIII (Rechtsanspruch auf frühkindliche Förderung)",
     "deadline": "6 to 9 months before required daycare start date",
@@ -290,8 +292,8 @@
   },
   {
     "id": "kirchensteuer-declaration-optout",
-    "title": "Kirchensteuer (Church Tax) Declaration & Formal Opt-Out",
-    "description": "Verify your religious affiliation status on tax records to avoid automatic 8% to 9% payroll surcharges, or complete formal civil departure (Kirchenaustritt).",
+    "title": "Church Tax (Kirchensteuer): Catholic & Protestant Payroll Trap",
+    "description": "Prevent or stop automatic 8% (Bayern & Baden-Württemberg) or 9% (other states) church tax deductions levied if you are registered as Roman Catholic or Evangelical Protestant.",
     "urgency": "recommended",
     "category": "Taxes & Employment",
     "conditions": {
@@ -299,12 +301,12 @@
     },
     "legal_ref": "Art. 140 GG i.V.m. Art. 137 WRV & Landeskirchensteuergesetze",
     "deadline": "During Anmeldung registration, or immediately upon first paycheck review",
-    "trap_warning": "During municipal Anmeldung, official registration forms include a question on religion. If you write 'Catholic', 'Protestant', or similar recognized denominations, the German state acts as a tax collector for religious bodies, deducting an additional 8% (Bavaria/Baden-Württemberg) or 9% (other states) of your income tax automatically every month. To stop this, you cannot simply tell HR or the church—you must appear in person at the Amtsgericht or Standesamt to execute a formal civil exit (Kirchenaustritt) and pay an administrative fee.",
+    "trap_warning": "German church tax is NOT an optional donation or statistical box—it is an enforceable state tax collected directly by the Finanzamt for the Roman Catholic (rk) and Evangelical Protestant (ev) churches. Expats baptized abroad who casually answer 'Catholic' or 'Christian' at the Bürgeramt find 8% to 9% of their income tax automatically withheld every month (costing €500–€3,000+ per year). Orthodox Christians, Muslims, and other denominations pay 0%, but the state will not refund mistakenly collected Catholic/Protestant tax retroactively without an official civil exit (Kirchenaustritt).",
     "action_steps": [
-      "If you do not practice or wish to pay church tax, state 'keine Religion' (or '-' / 'ohne Bekenntnis') during your initial Anmeldung",
-      "If church tax (KiSt) is already deducted on your payslip, book an appointment for 'Kirchenaustritt' at your local Amtsgericht or Bürgeramt/Standesamt",
-      "Pay the €30–€50 municipal administrative exit fee and obtain the official departure certificate (Kirchenaustrittsbescheinigung)",
-      "Send a certified copy of the Kirchenaustrittsbescheinigung to your local Finanzamt to update your ELStAM digital tax record"
+      "On your Anmeldung form: Write 'keine Religion' or '-' if you do not want to be taxed for foreign childhood baptism",
+      "If already deducted (look for 'KiSt' on your monthly payslip): Book a formal 'Kirchenaustritt' appointment at the municipal Amtsgericht or Standesamt/Bürgeramt",
+      "Pay the one-time civil departure fee (€30–€50) and obtain your official departure certificate (Kirchenaustrittsbescheinigung)",
+      "Send a certified copy of the Kirchenaustrittsbescheinigung to your local Finanzamt and HR to update your digital ELStAM tax record to 0%"
     ]
   },
   {
@@ -341,6 +343,46 @@
       "Use the mandatory statutory online cancellation button ('Verträge hier kündigen') required on all provider websites under § 312k BGB",
       "If customer support claims you are locked in for another year, cite § 309 Nr. 9 BGB in writing and demand immediate confirmation of termination within 30 days",
       "Revoke the SEPA direct debit mandate (SEPA-Lastschriftmandat) with your bank if unauthorized debits persist after your 1-month notice expiry"
+    ]
+  },
+  {
+    "id": "bayerisches-familiengeld-transition",
+    "title": "Bayerisches Familiengeld: Grandfathering Claim (Pre-2025 Children)",
+    "description": "Claim €250/month per child (€300 for 3rd+) during their 2nd and 3rd year of life via ZBFS if your child was born before January 1, 2025.",
+    "urgency": "recommended",
+    "category": "Family & Social",
+    "conditions": {
+      "has_children": true,
+      "state": "bayern"
+    },
+    "legal_ref": "Bayerisches Familiengeldgesetz (BayFamG)",
+    "deadline": "Until child's 3rd birthday (Strict expiry upon reaching 36 months of age)",
+    "trap_warning": "Bavaria abolished the Familiengeld for children born from January 1, 2025 onwards, and canceled the planned €3,000 Kinderstartgeld. Many expats assume this means Familiengeld was scrapped for EVERYONE. This is false! If your child was born BEFORE Jan 1, 2025, you are legally grandfathered in and entitled to up to €6,000 (€250/mo for 24 months). If you do not apply at the ZBFS before your child turns 3, you forfeit thousands of euros permanently.",
+    "action_steps": [
+      "Check child birth date: must be born on or before December 31, 2024",
+      "Log into the ZBFS portal (Zentrum Bayern Familie und Soziales) using your ELSTER or BayernID",
+      "Submit proof of main residence in Bavaria (Erweiterte Meldebescheinigung) and child's birth certificate",
+      "If you already received Elterngeld in Bavaria, verify if Familiengeld was activated automatically; if not, submit the formal BayFamG application immediately"
+    ]
+  },
+  {
+    "id": "bayern-kita-beitragszuschuss",
+    "title": "Bavarian Kita Subsidy: Enforce €100/Month Fee Reduction",
+    "description": "Ensure your Bavarian daycare provider deducts the statutory €100/month state contribution (Beitragszuschuss) from your monthly childcare invoices.",
+    "urgency": "recommended",
+    "category": "Family & Social",
+    "conditions": {
+      "has_children": true,
+      "state": "bayern"
+    },
+    "legal_ref": "Art. 23 BayKiBiG (Bayerisches Kinderbildungs- und -betreuungsgesetz)",
+    "deadline": "From September 1 of the calendar year the child turns 3 until primary school entry",
+    "trap_warning": "Unlike Berlin and Hamburg where daycare is tuition-free via Kita-Gutscheine, Bavarian daycare costs €250 to €800+ per month. However, the Free State of Bavaria pays an unconditional €100/month subsidy for every child starting September 1st of the year they turn 3. Some private, international, or parent-initiative Kitas (Eltern-Kind-Initiativen) fail to apply the discount automatically to expat parents' invoices unless you remind them of their BayKiBiG funding obligations.",
+    "action_steps": [
+      "Confirm child's age: subsidy begins September 1st of the year the child reaches age 3",
+      "Check monthly Kita fee invoice for explicit line item 'Staatlicher Beitragszuschuss -100,00 €'",
+      "If missing, provide facility management with written notice citing Art. 23 BayKiBiG",
+      "If your provider is not BayKiBiG-subsidized, claim up to €4,000/year (two-thirds of childcare costs) as special expenses (Sonderausgaben) on your annual income tax return"
     ]
   }
 ]

@@ -83,6 +83,7 @@ The state store persists the following profile parameters to `localStorage` unde
 - `housing`: `"own_apartment"` | `"wg"` | `null`
 - `marital_status`: `"single"` | `"married"` | `null`
 - `has_children`: `boolean` | `null`
+- `state`: `"bayern"` | `"berlin"` | `"nordrhein-westfalen"` | `"baden-wuerttemberg"` | `"hessen"` | `"hamburg"` | `"sachsen"` | `"niedersachsen"` | `"other"` | `null`
 - `completed_tasks`: `string[]` (IDs of checked tasks)
 - `is_configured`: `boolean` (tracks whether intake was completed)
 - `hasHydrated`: `boolean` (prevents SSR/client hydration mismatch)
@@ -108,6 +109,7 @@ Evaluates each task from `data/tasks.json` against the active user profile:
    - `housing`: Matches `"own_apartment"` or `"wg"`.
    - `marital_status`: Matches `"single"` or `"married"`.
    - `has_children`: Matches boolean equality.
+   - `state`: Matches federal state jurisdiction (e.g. `"bayern"` or `["berlin", "hamburg"]`).
 3. Automatically computes live statistics:
    - `totalCount`: Number of strictly applicable tasks.
    - `completedCount`: Number of completed tasks.
@@ -142,18 +144,20 @@ The database includes realistic, high-impact bureaucratic obligations and the le
 | `kirchensteuer-declaration-optout` | Kirchensteuer (Church Tax) Declaration & Formal Opt-Out | Recommended | `employment: "employed"` | Art. 140 GG / KiStG | Checking a religion on Anmeldung causes 8-9% extra tax withheld automatically; stopping it requires formal civil Kirchenaustritt. |
 | `wg-joint-liability-protection` | WG Joint Liability Defense (Gesamtschuldnerische Haftung) | Critical | `housing: "wg"` | § 421 / § 540 BGB | Main tenants in shared flats are 100% jointly liable if a roommate flees or defaults, and cannot unilaterally terminate their share. |
 | `consumer-contract-monthly-cancellation` | Fair Consumer Contracts: Enforce 1-Month Termination Right | Optional | Universal (`{}`) | § 309 Nr. 9 BGB | Subscriptions signed after March 2022 cannot lock in for another full year upon auto-renewal; termination notice is strictly 1 month. |
+| `bayerisches-familiengeld-transition` | Bayerisches Familiengeld: Grandfathering Claim | Recommended | `has_children: true`<br>`state: "bayern"` | BayFamG | Children born before Jan 1, 2025 are still entitled to €250/mo; benefit was abolished only for children born 2025 onwards. Must apply before 3rd birthday. |
+| `bayern-kita-beitragszuschuss` | Bavarian Kita Subsidy: Enforce €100/Month Fee Reduction | Recommended | `has_children: true`<br>`state: "bayern"` | Art. 23 BayKiBiG | Bavarian daycare costs €250–€800+/mo, but state pays an unconditional €100/mo fee contribution from September 1st of child's 3rd year. |
 
 ---
 
 ## 7. Interactive Features & User Flow
 
 1. **Intake Flow (`OnboardingForm.tsx`)**:
-   - 5 high-contrast question blocks.
+   - 6 high-contrast question blocks.
    - Instant visual feedback: `[REQUIRED]` switches to `[RESOLVED]`.
    - **Quick-Load Presets** for one-click testing:
-     - Preset A: Married Non-EU Worker + Child (tests Kindergeld + Work Permit)
-     - Preset B: Single Non-EU Student in WG (tests Sperrkonto + WG Radio fee)
-     - Preset C: EU Freelancer in Private Flat (tests Freelance Steuernummer)
+     - Preset A: Married Non-EU Worker in Bayern (tests Bavarian Familiengeld grandfathering)
+     - Preset B: Single Student in Berlin WG (tests Sperrkonto + WG Joint Liability)
+     - Preset C: EU Freelancer in NRW (tests Freelance Steuernummer + 9% Kirchensteuer)
 2. **Executive Dashboard (`Dashboard.tsx`)**:
    - Active dossier summary with `[RECONFIGURE PROFILE]` button.
    - Critical Administrative Threat banner if critical tasks remain uncompleted.
