@@ -48,6 +48,15 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
     onComplete();
   };
 
+  const scrollToQuestion = (questionNumber: number) => {
+    if (typeof document !== "undefined") {
+      const el = document.getElementById(`question-${questionNumber}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  };
+
   const applyPreset = (preset: {
     origin: Origin;
     employment: Employment;
@@ -62,6 +71,9 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
     setMaritalStatus(preset.marital_status);
     setHasChildren(preset.has_children);
     setState(preset.state);
+    setTimeout(() => {
+      document.getElementById("submit-card")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 150);
   };
 
   return (
@@ -142,7 +154,8 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
       <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-6 items-start">
         {/* Left Column: Question Sections */}
         <div className="flex-1 min-w-0 space-y-6 w-full">
-        <div className="border-4 border-black bg-white p-5">
+        {/* Question 1: Citizenship */}
+        <div id="question-1" className="border-4 border-black bg-white p-5 scroll-mt-6">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
               QUESTION 01 OF 06 // CITIZENSHIP
@@ -150,7 +163,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {origin ? (
               <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
-              <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
+              <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">[PENDING]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">Where is your passport / citizenship from?</h3>
@@ -160,7 +173,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={() => setOrigin("eu")}
+              onClick={() => {
+                setOrigin("eu");
+                setTimeout(() => scrollToQuestion(2), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 origin === "eu"
                   ? "bg-black text-white"
@@ -175,7 +191,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
 
             <button
               type="button"
-              onClick={() => setOrigin("non-eu")}
+              onClick={() => {
+                setOrigin("non-eu");
+                setTimeout(() => scrollToQuestion(2), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 origin === "non-eu"
                   ? "bg-black text-white"
@@ -191,7 +210,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         </div>
 
         {/* Question 2: Employment */}
-        <div className="border-4 border-black bg-white p-5">
+        <div id="question-2" className="border-4 border-black bg-white p-5 scroll-mt-6">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
               QUESTION 02 OF 06 // EMPLOYMENT TYPE
@@ -199,7 +218,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {employment ? (
               <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
-              <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
+              <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">[PENDING]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">What is your employment structure in Germany?</h3>
@@ -209,7 +228,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button
               type="button"
-              onClick={() => setEmployment("employed")}
+              onClick={() => {
+                setEmployment("employed");
+                setTimeout(() => scrollToQuestion(3), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 employment === "employed"
                   ? "bg-black text-white"
@@ -224,7 +246,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
 
             <button
               type="button"
-              onClick={() => setEmployment("freelance")}
+              onClick={() => {
+                setEmployment("freelance");
+                setTimeout(() => scrollToQuestion(3), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 employment === "freelance"
                   ? "bg-black text-white"
@@ -239,7 +264,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
 
             <button
               type="button"
-              onClick={() => setEmployment("student")}
+              onClick={() => {
+                setEmployment("student");
+                setTimeout(() => scrollToQuestion(3), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 employment === "student"
                   ? "bg-black text-white"
@@ -255,7 +283,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         </div>
 
         {/* Question 3: Housing */}
-        <div className="border-4 border-black bg-white p-5">
+        <div id="question-3" className="border-4 border-black bg-white p-5 scroll-mt-6">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
               QUESTION 03 OF 06 // HOUSING TYPE
@@ -263,7 +291,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {housing ? (
               <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
-              <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
+              <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">[PENDING]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">What is your housing arrangement?</h3>
@@ -273,7 +301,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={() => setHousing("own_apartment")}
+              onClick={() => {
+                setHousing("own_apartment");
+                setTimeout(() => scrollToQuestion(4), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 housing === "own_apartment"
                   ? "bg-black text-white"
@@ -288,7 +319,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
 
             <button
               type="button"
-              onClick={() => setHousing("wg")}
+              onClick={() => {
+                setHousing("wg");
+                setTimeout(() => scrollToQuestion(4), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 housing === "wg"
                   ? "bg-black text-white"
@@ -304,7 +338,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         </div>
 
         {/* Question 4: Marital Status */}
-        <div className="border-4 border-black bg-white p-5">
+        <div id="question-4" className="border-4 border-black bg-white p-5 scroll-mt-6">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
               QUESTION 04 OF 06 // MARITAL STATUS
@@ -312,7 +346,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {maritalStatus ? (
               <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
-              <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
+              <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">[PENDING]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">What is your legal marital status?</h3>
@@ -322,7 +356,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={() => setMaritalStatus("single")}
+              onClick={() => {
+                setMaritalStatus("single");
+                setTimeout(() => scrollToQuestion(5), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 maritalStatus === "single"
                   ? "bg-black text-white"
@@ -337,7 +374,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
 
             <button
               type="button"
-              onClick={() => setMaritalStatus("married")}
+              onClick={() => {
+                setMaritalStatus("married");
+                setTimeout(() => scrollToQuestion(5), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 maritalStatus === "married"
                   ? "bg-black text-white"
@@ -353,7 +393,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         </div>
 
         {/* Question 5: Children */}
-        <div className="border-4 border-black bg-white p-5">
+        <div id="question-5" className="border-4 border-black bg-white p-5 scroll-mt-6">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
               QUESTION 05 OF 06 // CHILDREN
@@ -361,7 +401,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {hasChildren !== null ? (
               <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
-              <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
+              <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">[PENDING]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">Do you have dependent children?</h3>
@@ -371,7 +411,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={() => setHasChildren(true)}
+              onClick={() => {
+                setHasChildren(true);
+                setTimeout(() => scrollToQuestion(6), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 hasChildren === true
                   ? "bg-black text-white"
@@ -386,7 +429,10 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
 
             <button
               type="button"
-              onClick={() => setHasChildren(false)}
+              onClick={() => {
+                setHasChildren(false);
+                setTimeout(() => scrollToQuestion(6), 150);
+              }}
               className={`p-4 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                 hasChildren === false
                   ? "bg-black text-white"
@@ -402,7 +448,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         </div>
 
         {/* Question 6: Bundesland */}
-        <div className="border-4 border-black bg-white p-5">
+        <div id="question-6" className="border-4 border-black bg-white p-5 scroll-mt-6">
           <div className="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
             <span className="font-mono text-xs font-black uppercase tracking-widest text-black">
               QUESTION 06 OF 06 // FEDERAL STATE (BUNDESLAND)
@@ -410,7 +456,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {state ? (
               <span className="font-mono text-xs font-bold bg-black text-white px-2 py-0.5">[ANSWERED]</span>
             ) : (
-              <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">[REQUIRED]</span>
+              <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">[PENDING]</span>
             )}
           </div>
           <h3 className="text-xl font-black text-black uppercase mb-1">In which German federal state (Bundesland) do you reside?</h3>
@@ -431,7 +477,12 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
               <button
                 key={st.id}
                 type="button"
-                onClick={() => setState(st.id)}
+                onClick={() => {
+                  setState(st.id);
+                  setTimeout(() => {
+                    document.getElementById("submit-card")?.scrollIntoView({ behavior: "smooth", block: "center" });
+                  }, 150);
+                }}
                 className={`p-3 border-2 border-black text-left font-sans cursor-pointer transition-none ${
                   state === st.id ? "bg-black text-white" : "bg-white text-black hover:bg-gray-100"
                 }`}
@@ -447,7 +498,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
         </div>
 
         {/* Right Column: Sticky Status & Submission Sidebar */}
-        <aside className="w-full lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-6 space-y-4">
+        <aside id="submit-card" className="w-full lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-6 space-y-4 scroll-mt-6">
           <div className="border-4 border-black bg-white p-5">
             <div className="border-b-2 border-black pb-3 mb-4">
               <div className="flex items-center justify-between gap-2 mb-1">
@@ -459,7 +510,7 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
                     [6 / 6 READY]
                   </span>
                 ) : (
-                  <span className="font-mono text-xs font-bold bg-red-600 text-white px-2 py-0.5">
+                  <span className="font-mono text-xs font-bold bg-gray-200 text-gray-800 border border-black px-2 py-0.5">
                     {[origin, employment, housing, maritalStatus, hasChildren !== null, state].filter(Boolean).length} / 6 ANSWERED
                   </span>
                 )}
@@ -472,30 +523,33 @@ export const OnboardingForm: React.FC<OnboardingFormProps> = ({ onComplete }) =>
             {/* Checklist items */}
             <div className="space-y-2 font-mono text-xs mb-5">
               {[
-                { label: "1. Nationality", val: origin ? origin.toUpperCase() : null },
+                { label: "1. Citizenship", val: origin ? origin.toUpperCase() : null },
                 { label: "2. Employment", val: employment ? employment.toUpperCase() : null },
                 { label: "3. Housing", val: housing ? (housing === "own_apartment" ? "APARTMENT" : "WG") : null },
                 { label: "4. Marital Status", val: maritalStatus ? maritalStatus.toUpperCase() : null },
                 { label: "5. Dependents", val: hasChildren !== null ? (hasChildren ? "CHILDREN: YES" : "NO CHILDREN") : null },
                 { label: "6. Jurisdiction", val: state ? state.toUpperCase() : null },
               ].map((item, idx) => (
-                <div
+                <button
+                  type="button"
                   key={idx}
-                  className={`p-2 border flex items-center justify-between gap-2 ${
+                  onClick={() => scrollToQuestion(idx + 1)}
+                  className={`w-full text-left p-2 border flex items-center justify-between gap-2 cursor-pointer transition-none ${
                     item.val
-                      ? "border-black bg-gray-50 text-black font-bold"
-                      : "border-gray-300 bg-white text-gray-500"
+                      ? "border-black bg-gray-50 text-black font-bold hover:bg-yellow-100"
+                      : "border-gray-400 bg-white text-gray-700 hover:border-black hover:bg-gray-50"
                   }`}
+                  title={`Jump to Question ${idx + 1}`}
                 >
                   <span className="truncate">{item.label}</span>
                   <span
                     className={`shrink-0 px-1.5 py-0.5 text-[10px] font-bold ${
-                      item.val ? "bg-black text-white" : "bg-red-100 text-red-700 border border-red-300"
+                      item.val ? "bg-black text-white" : "bg-gray-200 text-gray-800 border border-gray-400"
                     }`}
                   >
-                    {item.val ? `✓ ${item.val}` : "REQUIRED"}
+                    {item.val ? `✓ ${item.val}` : "PENDING"}
                   </span>
-                </div>
+                </button>
               ))}
             </div>
 

@@ -1,11 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: "Nail Germany | German Bureaucracy Checklist",
   description:
-    "A clear, practical guide for expats moving to and living in Germany. Stay on top of your Anmeldung, rental rights, health insurance, and taxes.",
-  authors: [{ name: "Nail Germany" }],
+    "A clear, practical guide for expats moving to and living in Germany. Stay on top of your Anmeldung, rental rights, health insurance, and taxes. Built by Yassin.",
+  authors: [{ name: "Yassin" }],
+  creator: "Yassin",
   keywords: [
     "Germany expat",
     "German bureaucracy",

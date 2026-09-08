@@ -4,6 +4,7 @@ import React, { useState, useSyncExternalStore } from "react";
 import { Header } from "@/components/Header";
 import { OnboardingForm } from "@/components/OnboardingForm";
 import { Dashboard } from "@/components/Dashboard";
+import { Footer } from "@/components/Footer";
 import { useProfileStore } from "@/store/useProfileStore";
 
 const emptySubscribe = () => () => {};
@@ -37,30 +38,38 @@ export default function HomePage() {
     );
   }
 
+  const handleEditProfile = () => {
+    setIsEditingProfile(true);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleCompleteOnboarding = () => {
+    setIsEditingProfile(false);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const showOnboarding = !isConfigured || isEditingProfile;
 
   return (
     <div className="min-h-screen bg-white text-black flex flex-col">
       <Header
         showReconfigure={!showOnboarding}
-        onReconfigure={() => setIsEditingProfile(true)}
+        onReconfigure={handleEditProfile}
       />
 
       <main className="flex-1">
         {showOnboarding ? (
-          <OnboardingForm
-            onComplete={() => {
-              setIsEditingProfile(false);
-            }}
-          />
+          <OnboardingForm onComplete={handleCompleteOnboarding} />
         ) : (
-          <Dashboard
-            onReconfigure={() => {
-              setIsEditingProfile(true);
-            }}
-          />
+          <Dashboard onReconfigure={handleEditProfile} />
         )}
       </main>
+
+      <Footer />
     </div>
   );
 }

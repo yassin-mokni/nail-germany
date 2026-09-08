@@ -38,22 +38,22 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
         </div>
 
         {task.legal_ref && (
-          <div className="font-bold text-black border border-black px-2 py-0.5 bg-white text-[11px]">
+          <div className="font-bold text-black border border-black px-2 py-0.5 bg-white text-[10px] sm:text-[11px] break-words">
             LAW: {task.legal_ref}
           </div>
         )}
       </div>
 
       {/* Main Card Body */}
-      <div className="p-4 md:p-5">
-        <div className="flex items-start gap-4">
+      <div className="p-3.5 sm:p-5">
+        <div className="flex items-start gap-3 sm:gap-4">
           {/* Brutalist Custom Checkbox */}
           <button
             type="button"
             role="checkbox"
             aria-checked={isCompleted}
             onClick={() => toggleCompletedTask(task.id)}
-            className={`w-8 h-8 shrink-0 border-2 border-black flex items-center justify-center cursor-pointer select-none font-mono text-base font-black transition-none focus:outline-none focus:ring-2 focus:ring-black ${
+            className={`w-7 h-7 sm:w-8 sm:h-8 shrink-0 border-2 border-black flex items-center justify-center cursor-pointer select-none font-mono text-sm sm:text-base font-black transition-none focus:outline-none focus:ring-2 focus:ring-black ${
               isCompleted ? "bg-black text-white" : "bg-white text-transparent hover:bg-gray-200"
             }`}
             title={isCompleted ? "Mark as pending" : "Mark as completed"}
@@ -65,7 +65,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
             <div className="flex items-start justify-between gap-3">
               <h3
                 onClick={() => toggleCompletedTask(task.id)}
-                className={`text-xl md:text-2xl font-black cursor-pointer tracking-tight leading-snug flex-1 ${
+                className={`text-lg sm:text-xl md:text-2xl font-black cursor-pointer tracking-tight leading-snug flex-1 ${
                   isCompleted ? "line-through text-gray-500" : "text-black"
                 }`}
               >
@@ -73,7 +73,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
               </h3>
 
               {isCompleted && (
-                <span className="font-mono text-xs font-bold px-2 py-0.5 bg-black text-white shrink-0">
+                <span className="font-mono text-[10px] sm:text-xs font-bold px-2 py-0.5 bg-black text-white shrink-0">
                   [✓ COMPLETED]
                 </span>
               )}
@@ -89,20 +89,20 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
               </div>
             )}
 
-            <p className={`mt-3 text-base leading-relaxed ${isCompleted ? "text-gray-600" : "text-black font-medium"}`}>
+            <p className={`mt-3 text-sm sm:text-base leading-relaxed ${isCompleted ? "text-gray-600" : "text-black font-medium"}`}>
               {task.description}
             </p>
 
             {/* Bureaucracy Trap Warning */}
             {task.trap_warning && (
               <div className="mt-4 border-2 border-black bg-amber-50">
-                <div className="bg-black text-amber-300 px-3 py-1.5 font-mono text-xs font-black uppercase tracking-wider flex items-center gap-2 border-b-2 border-black">
-                  <span className="bg-amber-400 text-black px-1.5 py-0.5 text-[10px] font-black">
+                <div className="bg-black text-amber-300 px-2.5 sm:px-3 py-1.5 font-mono text-[11px] sm:text-xs font-black uppercase tracking-wider flex flex-wrap items-center gap-1.5 sm:gap-2 border-b-2 border-black">
+                  <span className="bg-amber-400 text-black px-1.5 py-0.5 text-[10px] font-black shrink-0">
                     ! TRAP
                   </span>
-                  <span>WHAT TO WATCH OUT FOR (COMMON TRAP)</span>
+                  <span className="break-words">WHAT TO WATCH OUT FOR (COMMON TRAP)</span>
                 </div>
-                <p className="p-3 text-sm font-medium leading-relaxed text-black">
+                <p className="p-3 text-xs sm:text-sm font-medium leading-relaxed text-black">
                   {task.trap_warning}
                 </p>
               </div>
@@ -112,19 +112,19 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, index }) => {
             {task.action_steps && task.action_steps.length > 0 && (
               <div className="mt-4 border-t-2 border-black pt-3">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-black">
+                  <span className="font-mono text-[11px] sm:text-xs font-bold uppercase tracking-wider text-black">
                     ACTION STEPS ({task.action_steps.length}):
                   </span>
                   <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="font-mono text-xs text-black underline font-bold cursor-pointer"
+                    className="font-mono text-[11px] sm:text-xs text-black underline font-bold cursor-pointer"
                   >
                     {isExpanded ? "[- HIDE STEPS]" : "[+ VIEW STEPS]"}
                   </button>
                 </div>
 
                 {isExpanded && (
-                  <ol className="list-decimal list-inside space-y-1.5 font-mono text-xs text-black bg-gray-50 p-3 border-2 border-black">
+                  <ol className="list-decimal list-inside space-y-1.5 font-mono text-xs text-black bg-gray-50 p-2.5 sm:p-3 border-2 border-black">
                     {task.action_steps.map((step, idx) => (
                       <li key={idx} className="leading-snug">
                         <span className="font-medium text-black">{step}</span>

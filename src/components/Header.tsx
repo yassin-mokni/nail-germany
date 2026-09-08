@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useProfileStore } from "@/store/useProfileStore";
+import { LogoIcon } from "./Logo";
 
 interface HeaderProps {
   onReconfigure?: () => void;
@@ -14,47 +15,54 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
   return (
     <header className="border-b-4 border-black bg-white w-full">
       {/* Top Gov Meta Bar */}
-      <div className="bg-black text-white px-4 py-1.5 font-mono text-xs flex flex-wrap justify-between items-center gap-2">
+      <div className="bg-black text-white px-3 sm:px-4 py-1.5 font-mono text-[10px] sm:text-xs flex flex-wrap justify-between items-center gap-1.5 sm:gap-2">
         <div className="flex items-center gap-2">
-          <span className="font-bold tracking-widest">
+          <span className="font-bold tracking-wider sm:tracking-widest">
             NAIL GERMANY // RELOCATION & BUREAUCRACY GUIDE
           </span>
         </div>
-        <div className="text-gray-400 text-[11px]">
+        <div className="flex items-center gap-3 text-gray-400 text-[10px] sm:text-[11px]">
+          <span className="text-white font-bold tracking-wide">BUILT BY YASSIN</span>
+          <span>•</span>
           <span>UPDATED FOR 2026</span>
         </div>
       </div>
 
       {/* Main Header Content */}
-      <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div className="max-w-6xl mx-auto px-4 py-5 sm:py-6 flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6">
         <div>
-          <div className="inline-block bg-black text-white font-mono text-xs px-2 py-0.5 font-bold uppercase mb-2">
-            Practical Expat Checklist
+          <div className="inline-flex items-center gap-2 bg-black text-white font-mono text-[10px] sm:text-xs px-2 py-0.5 font-bold uppercase mb-2">
+            <span>Practical Expat Checklist</span>
+            <span className="text-gray-400">{"//"}</span>
+            <span className="text-yellow-400">Built by Yassin</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-black uppercase font-sans">
-            Nail Germany
-          </h1>
-          <p className="mt-2 text-base md:text-lg text-black font-medium max-w-2xl leading-snug">
+          <div className="flex items-center gap-3">
+            <LogoIcon size={40} className="sm:w-11 sm:h-11" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-black uppercase font-sans">
+              Nail Germany
+            </h1>
+          </div>
+          <p className="mt-2 text-sm sm:text-base md:text-lg text-black font-medium max-w-2xl leading-snug">
             A clear, honest guide to moving to and living in Germany. Know your rights, avoid costly mistakes with landlords or health insurance, and get your paperwork done on time.
           </p>
         </div>
 
         {/* Utilitarian Quick Actions */}
-        <div className="flex flex-wrap items-center gap-2 no-print font-mono text-xs">
+        <div className="flex flex-wrap items-center gap-2 no-print font-mono text-xs w-full md:w-auto">
           {showReconfigure && onReconfigure && (
             <button
               onClick={onReconfigure}
-              className="px-3 py-2 border-2 border-black bg-white hover:bg-black hover:text-white font-bold transition-none cursor-pointer"
+              className="flex-1 sm:flex-initial text-center px-3 py-2 border-2 border-black bg-white hover:bg-black hover:text-white font-bold transition-none cursor-pointer"
             >
               [↺ EDIT PROFILE]
             </button>
           )}
           <button
             onClick={() => window.print()}
-            className="px-3 py-2 border-2 border-black bg-white hover:bg-black hover:text-white font-bold transition-none cursor-pointer"
+            className="flex-1 sm:flex-initial text-center px-3 py-2 border-2 border-black bg-white hover:bg-black hover:text-white font-bold transition-none cursor-pointer"
             title="Print checklist for offline use"
           >
-            [⎙ PRINT CHECKLIST]
+            [⎙ PRINT]
           </button>
           <button
             onClick={() => {
@@ -62,9 +70,9 @@ export const Header: React.FC<HeaderProps> = ({ onReconfigure, showReconfigure =
                 resetProfile();
               }
             }}
-            className="px-3 py-2 border-2 border-black bg-gray-200 hover:bg-red-600 hover:text-white font-bold transition-none cursor-pointer"
+            className="flex-1 sm:flex-initial text-center px-3 py-2 border-2 border-black bg-gray-200 hover:bg-red-600 hover:text-white font-bold transition-none cursor-pointer"
           >
-            [✕ RESET DATA]
+            [✕ RESET]
           </button>
         </div>
       </div>

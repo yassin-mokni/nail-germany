@@ -11,10 +11,10 @@ export const UrgencyBadge: React.FC<UrgencyBadgeProps> = ({ urgency, className =
     case "critical":
       return (
         <span
-          className={`bg-red-600 text-white font-mono uppercase font-bold text-xs px-2.5 py-1 tracking-wider border-2 border-black inline-flex items-center gap-1 rounded-none select-none ${className}`}
+          className={`bg-black text-white font-mono uppercase font-bold text-xs px-2.5 py-1 tracking-wider border-2 border-black inline-flex items-center gap-1.5 rounded-none select-none ${className}`}
         >
-          <span className="inline-block w-2 h-2 bg-white" />
-          CRITICAL PRIORITY
+          <span className="inline-block w-2 h-2 bg-amber-400" />
+          TIME-SENSITIVE
         </span>
       );
     case "recommended":

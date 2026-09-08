@@ -60,35 +60,35 @@ export const ProfileSummary: React.FC<ProfileSummaryProps> = ({ onEdit }) => {
         </button>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 font-mono text-xs">
-        <div className="border-2 border-black p-2.5 bg-gray-50">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 font-mono text-xs">
+        <div className="border-2 border-black p-2 sm:p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">1. ORIGIN</span>
-          <span className="font-bold text-black text-sm block mt-0.5">{formatOrigin(origin)}</span>
+          <span className="font-bold text-black text-xs sm:text-sm block mt-0.5 break-words leading-tight">{formatOrigin(origin)}</span>
         </div>
 
-        <div className="border-2 border-black p-2.5 bg-gray-50">
+        <div className="border-2 border-black p-2 sm:p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">2. EMPLOYMENT</span>
-          <span className="font-bold text-black text-sm block mt-0.5">{formatEmployment(employment)}</span>
+          <span className="font-bold text-black text-xs sm:text-sm block mt-0.5 break-words leading-tight">{formatEmployment(employment)}</span>
         </div>
 
-        <div className="border-2 border-black p-2.5 bg-gray-50">
+        <div className="border-2 border-black p-2 sm:p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">3. HOUSING</span>
-          <span className="font-bold text-black text-sm block mt-0.5">{formatHousing(housing)}</span>
+          <span className="font-bold text-black text-xs sm:text-sm block mt-0.5 break-words leading-tight">{formatHousing(housing)}</span>
         </div>
 
-        <div className="border-2 border-black p-2.5 bg-gray-50">
+        <div className="border-2 border-black p-2 sm:p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">4. MARITAL STATUS</span>
-          <span className="font-bold text-black text-sm block mt-0.5">{formatMarital(marital_status)}</span>
+          <span className="font-bold text-black text-xs sm:text-sm block mt-0.5 break-words leading-tight">{formatMarital(marital_status)}</span>
         </div>
 
-        <div className="border-2 border-black p-2.5 bg-gray-50">
+        <div className="border-2 border-black p-2 sm:p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">5. DEPENDENTS</span>
-          <span className="font-bold text-black text-sm block mt-0.5">{formatChildren(has_children)}</span>
+          <span className="font-bold text-black text-xs sm:text-sm block mt-0.5 break-words leading-tight">{formatChildren(has_children)}</span>
         </div>
 
-        <div className="border-2 border-black p-2.5 bg-gray-50">
+        <div className="border-2 border-black p-2 sm:p-2.5 bg-gray-50">
           <span className="text-[10px] text-gray-700 block uppercase font-bold">6. JURISDICTION</span>
-          <span className="font-bold text-black text-sm block mt-0.5">{formatState(state)}</span>
+          <span className="font-bold text-black text-xs sm:text-sm block mt-0.5 break-words leading-tight">{formatState(state)}</span>
         </div>
       </div>
     </div>

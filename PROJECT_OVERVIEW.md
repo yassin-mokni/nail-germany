@@ -9,6 +9,7 @@ A purely static, client-side web application designed to help expats navigate Ge
 | Attribute | Specification |
 | :--- | :--- |
 | **Project Name** | Nail Germany |
+| **Author / Creator** | Built by Yassin |
 | **Directory** | `projects/nail-germany` |
 | **Framework** | Next.js 16 (App Router) configured for purely static export (`output: 'export'`) |
 | **Styling** | Tailwind CSS v4 (Utilitarian, Brutalist, High-Contrast Gov.uk / Terminal style) |
